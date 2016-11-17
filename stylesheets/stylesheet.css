@@ -9,9 +9,10 @@ body {
 }
 
 /* Cambios Israel */
-.img-esrael {
-  width: 50px;
-  border-radius: 20px;
+.img.img-esrael {
+    width: 19%;
+    float: left;
+    margin-right: 33px;
 }
 
 /* General & 'Reset' Stuff */
