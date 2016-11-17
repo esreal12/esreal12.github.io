@@ -8,6 +8,12 @@ body {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
+/* Cambios Israel */
+.img-esrael {
+  width: 50%;
+  border-radius: 20px;
+}
+
 /* General & 'Reset' Stuff */
 
 .container {
