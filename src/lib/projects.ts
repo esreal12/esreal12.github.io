@@ -16,3 +16,7 @@ export function getProjectBySlug(
 ): ProjectRecord | undefined {
   return projects.find((project) => project.slug === slug);
 }
+
+export function getLiveLink(project: Pick<ProjectRecord, 'liveUrl'>): string | null {
+  return project.liveUrl;
+}

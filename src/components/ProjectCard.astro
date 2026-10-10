@@ -1,0 +1,37 @@
+---
+import type { Locale } from '../lib/locale';
+import { getLiveLink, type ProjectRecord } from '../lib/projects';
+
+interface Props {
+  locale: Locale;
+  project: ProjectRecord;
+}
+
+const { locale, project } = Astro.props;
+const copy = project.translations[locale];
+const liveUrl = getLiveLink(project);
+---
+
+<article class="project-card" data-project-card={project.slug}>
+  <a class="project-image-link" href={`/${locale}/work/${project.slug}/`} aria-label={copy.title}>
+    <img src={project.image} alt={copy.alt} width="1600" height="1000" loading="lazy" />
+  </a>
+  <div class="project-card-content">
+    <p class="project-meta">{project.year}</p>
+    <h2><a href={`/${locale}/work/${project.slug}/`}>{copy.title}</a></h2>
+    <p>{copy.summary}</p>
+    <ul class="technology-list" aria-label="Technologies">
+      {project.technologies.map((technology) => <li>{technology}</li>)}
+    </ul>
+    <div class="project-links">
+      <a href={`/${locale}/work/${project.slug}/`}>{locale === 'es' ? 'Ver proyecto' : 'View project'}</a>
+      {liveUrl ? (
+        <a href={liveUrl} rel="noreferrer" target="_blank">
+          {locale === 'es' ? 'Visitar sitio' : 'Visit site'}
+        </a>
+      ) : (
+        <span>{copy.unavailableLinkLabel}</span>
+      )}
+    </div>
+  </div>
+</article>

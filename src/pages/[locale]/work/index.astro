@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from '../../../components/ProjectCard.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { isLocale, LOCALES } from '../../../lib/locale';
+import { getOrderedProjects } from '../../../lib/projects';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const localeParam = Astro.params.locale ?? '';
+if (!isLocale(localeParam)) {
+  return new Response(null, { status: 404 });
+}
+
+const locale = localeParam;
+const projects = getOrderedProjects((await getCollection('projects')).map((entry) => entry.data));
+const pageCopy = locale === 'es'
+  ? { title: 'Proyectos seleccionados', description: 'Una selección de trabajo digital de Andrés Israel Umaña Sedó.', eyebrow: 'Trabajo seleccionado' }
+  : { title: 'Selected work', description: 'A selection of digital work by Andrés Israel Umaña Sedó.', eyebrow: 'Selected work' };
+---
+
+<BaseLayout locale={locale} title={pageCopy.title} description={pageCopy.description} canonicalPath={`/${locale}/work/`}>
+  <section class="work-collection container">
+    <header class="page-intro">
+      <p class="eyebrow">{pageCopy.eyebrow}</p>
+      <h1>{pageCopy.title}</h1>
+      <p>{pageCopy.description}</p>
+    </header>
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard locale={locale} project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -80,11 +80,37 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
 .site-footer { min-height: 7rem; padding-block: var(--space-3); border-top: 1px dashed var(--line); color: var(--ink-muted); font-size: 0.95rem; }
 .site-footer p { margin: 0; }
 
+.work-collection { padding-block: var(--space-5) var(--space-6); }
+.page-intro { display: grid; gap: var(--space-2); max-width: 46rem; margin-bottom: var(--space-5); }
+.page-intro h1 { margin: 0; font-size: clamp(2.8rem, 7vw, 6rem); line-height: 0.94; letter-spacing: -0.055em; }
+.page-intro p:not(.eyebrow) { margin: 0; color: var(--ink-muted); font-size: 1.15rem; line-height: 1.5; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.project-card { display: grid; overflow: hidden; border: 1px dashed var(--line); background: #fff; }
+.project-image-link { aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-deep); }
+.project-image-link img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 180ms ease; }
+.project-image-link:hover img { transform: scale(1.025); }
+.project-card-content { display: grid; align-content: start; gap: var(--space-2); padding: var(--space-3); }
+.project-card h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1; letter-spacing: -0.04em; }
+.project-card h2 a { text-decoration: none; }
+.project-card p { margin: 0; color: var(--ink-muted); line-height: 1.5; }
+.project-meta, .technology-list, .project-links { font-family: 'Fira Mono', monospace; font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.project-meta { color: var(--violet) !important; }
+.technology-list { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0; margin: 0; list-style: none; color: var(--ink-muted); }
+.technology-list li { border: 1px solid var(--line); padding: 0.3rem 0.45rem; }
+.project-links { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-1); }
+.project-links a { color: var(--ink); text-decoration-color: var(--orange); }
+.project-links span { color: var(--ink-muted); }
+.project-gallery { display: grid; gap: var(--space-3); }
+.project-gallery figure { margin: 0; }
+.project-gallery img { width: 100%; height: auto; display: block; }
+.project-gallery figcaption { margin-top: var(--space-1); color: var(--ink-muted); font-size: 0.9rem; }
+
 @media (max-width: 46rem) {
   .site-header { align-items: flex-start; padding-block: var(--space-2); }
   .header-actions { align-items: flex-end; flex-direction: column-reverse; }
   .primary-nav { justify-content: flex-end; gap: var(--space-1); }
   .site-footer { align-items: flex-start; flex-direction: column; }
+  .project-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

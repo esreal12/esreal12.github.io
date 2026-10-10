@@ -16,3 +16,16 @@ test('keyboard users can see a skip link', async ({ page }) => {
 
   await expect(page.getByRole('link', { name: /saltar al contenido/i })).toBeVisible();
 });
+
+test('work collection renders all seven records in English', async ({ page }) => {
+  await page.goto('/en/work/');
+
+  await expect(page.locator('[data-project-card]')).toHaveCount(7);
+  await expect(page.getByRole('heading', { name: /congero technology group/i })).toBeVisible();
+});
+
+test('work collection renders all seven records in Spanish', async ({ page }) => {
+  await page.goto('/es/work/');
+
+  await expect(page.locator('[data-project-card]')).toHaveCount(7);
+});
