@@ -1,0 +1,23 @@
+{
+  "name": "andres-israel-umana-digital-work",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "astro": "^7.3.8",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.3"
+  }
+}
