@@ -75,6 +75,17 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
 .shell-intro { display: grid; min-height: calc(100vh - 12.5rem); align-content: center; gap: var(--space-3); padding-block: var(--space-6); }
 .shell-intro h1 { max-width: 14ch; margin: 0; font-size: clamp(3rem, 9vw, 8rem); line-height: 0.92; letter-spacing: -0.06em; }
 .shell-intro p:not(.eyebrow) { max-width: 38rem; margin: 0; color: var(--ink-muted); font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.55; }
+.primary-action, .contact-links a { width: fit-content; padding: 0.85rem 1rem; border: 2px solid var(--ink); background: var(--lime); color: var(--ink); font-family: 'Fira Mono', monospace; font-size: 0.78rem; text-decoration: none; text-transform: uppercase; }
+.home-section { padding-block: var(--space-5); border-top: 1px dashed var(--line); }
+.capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+.capability-grid article { padding-top: var(--space-2); border-top: 3px solid var(--orange); }
+.capability-grid h2, .narrative-block h2 { margin: 0 0 var(--space-1); font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1; letter-spacing: -0.04em; }
+.capability-grid p, .narrative-block p:not(.eyebrow), .narrative-page > p:not(.eyebrow) { margin: 0; color: var(--ink-muted); line-height: 1.55; }
+.narrative-block { display: grid; gap: var(--space-2); max-width: 54rem; }
+.narrative-block a { width: fit-content; color: var(--ink); text-decoration-color: var(--orange); }
+.narrative-page { display: grid; align-content: center; gap: var(--space-2); min-height: calc(100vh - 12.5rem); padding-block: var(--space-5); max-width: 54rem; }
+.narrative-page h1 { margin: 0; font-size: clamp(3rem, 8vw, 7rem); line-height: 0.92; letter-spacing: -0.06em; }
+.contact-links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .eyebrow { margin: 0; color: var(--violet); }
 
 .site-footer { min-height: 7rem; padding-block: var(--space-3); border-top: 1px dashed var(--line); color: var(--ink-muted); font-size: 0.95rem; }
@@ -131,6 +142,7 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
   .primary-nav { justify-content: flex-end; gap: var(--space-1); }
   .site-footer { align-items: flex-start; flex-direction: column; }
   .project-grid { grid-template-columns: 1fr; }
+  .capability-grid { grid-template-columns: 1fr; }
   .case-facts, .case-sections, .not-found { grid-template-columns: 1fr; }
   .case-pagination { flex-direction: column; }
 }

@@ -1,0 +1,14 @@
+---
+import { profile } from '../data/profile';
+import type { Locale } from '../lib/locale';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const copy = profile.locales[locale].contact;
+---
+
+<div class="contact-links">
+  <a href={profile.schedulingUrl} rel="noreferrer" target="_blank">{copy.schedule}</a>
+  <a href={`mailto:${profile.email}`}>{copy.email}</a>
+  <a href={profile.linkedIn} rel="noreferrer" target="_blank">{copy.linkedIn}</a>
+</div>

@@ -1,7 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import ContactLinks from '../../components/ContactLinks.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
 import { profile } from '../../data/profile';
 import { isLocale, LOCALES } from '../../lib/locale';
+import { getFeaturedProjects } from '../../lib/projects';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -14,6 +18,7 @@ if (!isLocale(localeParam)) {
 
 const locale = localeParam;
 const copy = profile.locales[locale];
+const featuredProjects = getFeaturedProjects((await getCollection('projects')).map((entry) => entry.data));
 ---
 
 <BaseLayout
@@ -26,5 +31,16 @@ const copy = profile.locales[locale];
     <p class="eyebrow">{copy.home.eyebrow}</p>
     <h1>{copy.home.title}</h1>
     <p>{copy.home.description}</p>
+    <a class="primary-action" href={`/${locale}/work/`}>{copy.home.primaryAction}</a>
   </section>
+  <section class="home-section container">
+    <p class="eyebrow">{copy.home.selectedWork}</p>
+    <div class="project-grid">{featuredProjects.map((project) => <ProjectCard locale={locale} project={project} />)}</div>
+  </section>
+  <section class="home-section container">
+    <p class="eyebrow">{copy.home.capabilities}</p>
+    <div class="capability-grid">{copy.capabilities.map((capability) => <article><h2>{capability.title}</h2><p>{capability.description}</p></article>)}</div>
+  </section>
+  <section class="home-section container narrative-block"><p class="eyebrow">{copy.home.experience}</p><h2>{copy.experience.title}</h2><p>{copy.experience.body}</p><a href={`/${locale}/about/`}>{locale === 'es' ? 'Conocer mi trayectoria' : 'Read my story'}</a></section>
+  <section class="home-section container narrative-block"><p class="eyebrow">{copy.home.contact}</p><ContactLinks locale={locale} /></section>
 </BaseLayout>

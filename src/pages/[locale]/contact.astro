@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactLinks from '../../components/ContactLinks.astro';
+import { profile } from '../../data/profile';
+import { isLocale, LOCALES } from '../../lib/locale';
+export function getStaticPaths() { return LOCALES.map((locale) => ({ params: { locale } })); }
+const value = Astro.params.locale ?? '';
+if (!isLocale(value)) return new Response(null, { status: 404 });
+const locale = value;
+const copy = profile.locales[locale].contact;
+---
+<BaseLayout locale={locale} title={copy.title} description={copy.description} canonicalPath={`/${locale}/contact/`}>
+  <section class="narrative-page container"><p class="eyebrow">{profile.mark}</p><h1>{copy.title}</h1><p>{copy.description}</p><ContactLinks locale={locale} /></section>
+</BaseLayout>

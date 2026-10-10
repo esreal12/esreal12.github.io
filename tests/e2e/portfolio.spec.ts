@@ -45,3 +45,20 @@ test('unknown work slug does not expose another project', async ({ page }) => {
   await expect(page.getByRole('heading', { name: /página no encontrada/i })).toBeVisible();
   await expect(page.getByRole('link', { name: /explorar proyectos/i })).toHaveAttribute('href', '/es/work/');
 });
+
+test('homepage uses one primary project action and never asks visitors to self-segment', async ({ page }) => {
+  await page.goto('/en/');
+
+  await expect(page.getByRole('link', { name: /explore selected work/i })).toHaveCount(1);
+  await expect(page.getByText(/for recruiters/i)).toHaveCount(0);
+  await expect(page.getByText(/for clients/i)).toHaveCount(0);
+});
+
+test('contact page exposes scheduling, email, and LinkedIn', async ({ page }) => {
+  await page.goto('/es/contact/');
+  const main = page.locator('main');
+
+  await expect(main.getByRole('link', { name: /agendar/i })).toHaveCount(1);
+  await expect(main.getByRole('link', { name: /email/i })).toHaveAttribute('href', /mailto:/);
+  await expect(main.getByRole('link', { name: /linkedin/i })).toHaveAttribute('href', /linkedin\.com/);
+});
