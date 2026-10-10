@@ -29,3 +29,19 @@ test('work collection renders all seven records in Spanish', async ({ page }) =>
 
   await expect(page.locator('[data-project-card]')).toHaveCount(7);
 });
+
+test('featured case study renders role, decisions, outcome, and gallery', async ({ page }) => {
+  await page.goto('/en/work/congero-technology-group/');
+
+  await expect(page.getByRole('heading', { name: /congero technology group/i })).toBeVisible();
+  await expect(page.getByTestId('case-decisions')).toBeVisible();
+  await expect(page.getByTestId('case-outcome')).toBeVisible();
+  await expect(page.locator('figure')).not.toHaveCount(0);
+});
+
+test('unknown work slug does not expose another project', async ({ page }) => {
+  await page.goto('/es/work/no-existe/');
+
+  await expect(page.getByRole('heading', { name: /página no encontrada/i })).toBeVisible();
+  await expect(page.getByRole('link', { name: /explorar proyectos/i })).toHaveAttribute('href', '/es/work/');
+});

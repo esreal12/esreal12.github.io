@@ -7,7 +7,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: './node_modules/.bin/vite preview --host 127.0.0.1 --port 4321 --outDir dist',
+    command: 'node scripts/preview-static.mjs',
     url: 'http://127.0.0.1:4321/es/',
     reuseExistingServer: !process.env.CI,
   },

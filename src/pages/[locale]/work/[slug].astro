@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import CaseStudy from '../../../components/CaseStudy.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { isLocale, LOCALES } from '../../../lib/locale';
+import { getOrderedProjects, getProjectBySlug, type ProjectRecord } from '../../../lib/projects';
+
+export async function getStaticPaths() {
+  const projects = (await getCollection('projects')).map((entry) => entry.data);
+
+  return LOCALES.flatMap((locale) =>
+    projects.map((project) => ({ params: { locale, slug: project.slug } })),
+  );
+}
+
+const localeParam = Astro.params.locale ?? '';
+const slug = Astro.params.slug ?? '';
+if (!isLocale(localeParam)) {
+  return new Response(null, { status: 404 });
+}
+
+const locale = localeParam;
+const projects = getOrderedProjects((await getCollection('projects')).map((entry) => entry.data));
+const project = getProjectBySlug(projects, slug);
+
+if (!project) {
+  return new Response(null, { status: 404 });
+}
+
+const currentIndex = projects.findIndex((item) => item.slug === project.slug);
+const previousProject = projects.at(currentIndex - 1) ?? projects.at(-1);
+const nextProject = projects.at((currentIndex + 1) % projects.length);
+const copy = project.translations[locale];
+const navigationCopy = locale === 'es' ? { previous: 'Proyecto anterior', next: 'Siguiente proyecto' } : { previous: 'Previous project', next: 'Next project' };
+---
+
+<BaseLayout locale={locale} title={`${copy.title} — Andrés Israel Umaña Sedó`} description={copy.summary} canonicalPath={`/${locale}/work/${project.slug}/`}>
+  <CaseStudy locale={locale} project={project as ProjectRecord} />
+  <nav class="case-pagination container" aria-label="Project navigation">
+    {previousProject && <a href={`/${locale}/work/${previousProject.slug}/`}>← {navigationCopy.previous}</a>}
+    {nextProject && <a href={`/${locale}/work/${nextProject.slug}/`}>{navigationCopy.next} →</a>}
+  </nav>
+</BaseLayout>
