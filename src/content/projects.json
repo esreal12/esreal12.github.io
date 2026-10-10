@@ -1,0 +1,330 @@
+[
+  {
+    "id": "asociacion-bancaria-costarricense",
+    "slug": "asociacion-bancaria-costarricense",
+    "order": 1,
+    "featured": true,
+    "caseStudy": true,
+    "year": "2018–2026",
+    "disciplines": ["Platform development", "Content architecture", "Technical support"],
+    "technologies": ["WordPress", "PHP", "HTML", "CSS/SCSS", "JavaScript", "Git"],
+    "image": "/images/projects/abc-overview.jpg",
+    "liveUrl": "https://www.abc.fi.cr/",
+    "translations": {
+      "es": {
+        "title": "Asociación Bancaria Costarricense",
+        "summary": "Evolución sostenida de una plataforma institucional para contenidos, recursos sectoriales y comunicación pública.",
+        "challenge": "Mantener y evolucionar una plataforma institucional amplia, con necesidades cambiantes de contenido, publicación, rendimiento y soporte técnico.",
+        "role": "Desarrollo WordPress, arquitectura de contenido, implementación front-end, mantenimiento, optimización y soporte técnico durante distintas etapas de la plataforma.",
+        "solution": "Implementación de componentes y estructuras de contenido personalizadas para sostener una experiencia clara, adaptable y operable por el equipo de la Asociación.",
+        "alt": "Página de inicio de la Asociación Bancaria Costarricense.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible",
+        "decisions": [
+          "Estructurar contenido especializado con componentes y tipos de contenido personalizados.",
+          "Mantener una base técnica preparada para mejoras continuas de rendimiento, accesibilidad y SEO técnico.",
+          "Trabajar con equipos de contenido, QA y producto dentro de flujos de revisión y publicación."
+        ],
+        "outcome": "Una colaboración de largo plazo que ha acompañado la evolución, operación y confiabilidad de la presencia digital institucional.",
+        "gallery": [
+          {
+            "src": "/images/projects/abc-overview.jpg",
+            "alt": "Página de inicio institucional de la Asociación Bancaria Costarricense.",
+            "caption": "Plataforma institucional para información, recursos y comunicación sectorial."
+          }
+        ]
+      },
+      "en": {
+        "title": "Costa Rican Banking Association",
+        "summary": "Long-term evolution of an institutional platform for content, sector resources, and public communication.",
+        "challenge": "Maintain and evolve a broad institutional platform with changing requirements for content, publishing, performance, and technical support.",
+        "role": "WordPress development, content architecture, front-end implementation, maintenance, optimization, and technical support across multiple platform stages.",
+        "solution": "Implemented custom content structures and components that support a clear, adaptable experience for the Association's team.",
+        "alt": "Costa Rican Banking Association homepage.",
+        "unavailableLinkLabel": "Live site unavailable",
+        "decisions": [
+          "Structured specialized content through custom components and content types.",
+          "Maintained a technical foundation for ongoing performance, accessibility, and technical SEO improvements.",
+          "Worked with content, QA, and product teams through review and publishing workflows."
+        ],
+        "outcome": "A long-term collaboration supporting the evolution, operation, and reliability of an institutional digital presence.",
+        "gallery": [
+          {
+            "src": "/images/projects/abc-overview.jpg",
+            "alt": "Institutional homepage for the Costa Rican Banking Association.",
+            "caption": "Institutional platform for information, resources, and sector communication."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "kajual-gastronomia",
+    "slug": "kajual-gastronomia",
+    "order": 2,
+    "featured": true,
+    "caseStudy": true,
+    "year": "2025",
+    "disciplines": ["E-commerce", "Custom storefront development", "Reservations"],
+    "technologies": ["Shopify", "Liquid", "HTML", "CSS", "JavaScript"],
+    "image": "/images/projects/kajual-overview.jpg",
+    "liveUrl": "https://www.kajualgastronomia.com/",
+    "translations": {
+      "es": {
+        "title": "Kajual Gastronomía",
+        "summary": "Una experiencia digital para contratar chefs privados, explorar experiencias gastronómicas y comprar productos artesanales.",
+        "challenge": "Unir servicios, reservas y comercio en una experiencia coherente para una propuesta gastronómica con varias formas de compra.",
+        "role": "Diseño y desarrollo de partes personalizadas de Shopify, con Liquid para adaptar la experiencia a la oferta de la marca.",
+        "solution": "Construcción de una tienda y catálogo de servicios responsivos que conectan productos, experiencias y llamados a la acción claros.",
+        "alt": "Sitio de Kajual Gastronomía mostrando su propuesta culinaria.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible",
+        "decisions": [
+          "Usar Shopify como base operativa de comercio y adaptar áreas clave con Liquid.",
+          "Organizar servicios y productos para que cada intención de compra tenga un siguiente paso claro.",
+          "Priorizar una presentación responsive de la propuesta visual y gastronómica."
+        ],
+        "outcome": "Una plataforma comercial que reúne experiencias, servicios y productos en un solo recorrido de marca.",
+        "gallery": [
+          {
+            "src": "/images/projects/kajual-overview.jpg",
+            "alt": "Página de Kajual Gastronomía con experiencias culinarias.",
+            "caption": "Comercio y experiencias gastronómicas presentados en una misma plataforma."
+          }
+        ]
+      },
+      "en": {
+        "title": "Kajual Gastronomía",
+        "summary": "A digital experience for hiring private chefs, exploring culinary experiences, and buying artisanal products.",
+        "challenge": "Bring services, reservations, and commerce together in one coherent experience for a brand with multiple purchase paths.",
+        "role": "Design and development of custom Shopify areas, using Liquid to adapt the experience to the brand's offering.",
+        "solution": "Built a responsive storefront and service catalogue that connects products, experiences, and clear calls to action.",
+        "alt": "Kajual Gastronomía website presenting its culinary offering.",
+        "unavailableLinkLabel": "Live site unavailable",
+        "decisions": [
+          "Used Shopify as the operational commerce foundation and adapted key areas with Liquid.",
+          "Organized services and products so each buying intent has a clear next step.",
+          "Prioritized a responsive presentation of the visual and culinary proposition."
+        ],
+        "outcome": "A commerce platform bringing experiences, services, and products into one brand journey.",
+        "gallery": [
+          {
+            "src": "/images/projects/kajual-overview.jpg",
+            "alt": "Kajual Gastronomía page featuring culinary experiences.",
+            "caption": "Commerce and culinary experiences in one platform."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "estructuras-sa",
+    "slug": "estructuras-sa",
+    "order": 3,
+    "featured": true,
+    "caseStudy": true,
+    "year": "2025",
+    "disciplines": ["WordPress development", "Figma implementation", "Responsive front end"],
+    "technologies": ["WordPress", "Figma", "PHP", "HTML", "CSS/SCSS", "JavaScript"],
+    "image": "/images/projects/estructuras-overview.jpg",
+    "liveUrl": "https://estructurassa.com/",
+    "translations": {
+      "es": {
+        "title": "Estructuras S.A.",
+        "summary": "Implementación WordPress de una presencia corporativa, a partir del diseño entregado por la agencia Elástica.",
+        "challenge": "Convertir diseño visual y requisitos de negocio en una experiencia corporativa responsiva y funcional, incluyendo necesidades operativas de empleo y proveedores.",
+        "role": "Implementación front-end, desarrollo WordPress, adaptación de arquitectura y programación de formularios personalizados.",
+        "solution": "Traducción del diseño de Figma a componentes y plantillas WordPress, con formularios personalizados para procesos internos.",
+        "alt": "Página corporativa de Estructuras S.A.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible",
+        "decisions": [
+          "Implementar fielmente el diseño suministrado por Elástica sin atribuir el diseño visual como propio.",
+          "Adaptar la estructura WordPress a requerimientos corporativos y flujos de formularios personalizados.",
+          "Asegurar comportamiento responsive en la implementación de las pantallas de Figma."
+        ],
+        "outcome": "Una presencia corporativa funcional que conecta especificaciones de diseño, estructura de contenido y necesidades operativas.",
+        "gallery": [
+          {
+            "src": "/images/projects/estructuras-overview.jpg",
+            "alt": "Página corporativa de Estructuras S.A. implementada en WordPress.",
+            "caption": "Implementación WordPress a partir del diseño proporcionado por Elástica."
+          }
+        ]
+      },
+      "en": {
+        "title": "Estructuras S.A.",
+        "summary": "WordPress implementation of a corporate presence from designs supplied by Elástica agency.",
+        "challenge": "Translate visual design and business requirements into a responsive, functional corporate experience, including employment and supplier workflow needs.",
+        "role": "Front-end implementation, WordPress development, architecture adaptation, and custom form programming.",
+        "solution": "Translated Figma designs into WordPress components and templates, with custom forms for internal processes.",
+        "alt": "Estructuras S.A. corporate website.",
+        "unavailableLinkLabel": "Live site unavailable",
+        "decisions": [
+          "Implemented Elástica's supplied design faithfully without claiming the visual design as personal work.",
+          "Adapted the WordPress structure to corporate requirements and custom form workflows.",
+          "Ensured responsive behavior across the Figma screen implementation."
+        ],
+        "outcome": "A functional corporate presence connecting design specifications, content structure, and operational needs.",
+        "gallery": [
+          {
+            "src": "/images/projects/estructuras-overview.jpg",
+            "alt": "Estructuras S.A. corporate site implemented in WordPress.",
+            "caption": "WordPress implementation from a design supplied by Elástica."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "congero-technology-group",
+    "slug": "congero-technology-group",
+    "order": 4,
+    "featured": true,
+    "caseStudy": true,
+    "year": "2026",
+    "disciplines": ["WordPress development", "Design refinement", "Cloud operations"],
+    "technologies": ["WordPress", "AWS", "Bitnami", "SSH", "Linux"],
+    "image": "/images/projects/congero-overview.jpg",
+    "liveUrl": "https://congerotechnology.com/",
+    "translations": {
+      "es": {
+        "title": "Congero Technology Group",
+        "summary": "Evolución de un diseño inicial hacia una solución WordPress lista para una empresa de transformación digital.",
+        "challenge": "Convertir una dirección visual inicial en una solución web real y mantenerla con responsabilidad operativa sobre infraestructura en AWS.",
+        "role": "Mejora de diseño, implementación WordPress y operación técnica mediante AWS, Bitnami y acceso SSH de servidor.",
+        "solution": "Ajuste de la experiencia presentada originalmente y desarrollo de una implementación WordPress preparada para contenido corporativo y operación continua.",
+        "alt": "Página de Congero Technology Group sobre soluciones de transformación digital.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible",
+        "decisions": [
+          "Refinar el diseño inicial para que funcionara como una experiencia web clara y adaptable.",
+          "Construir la solución en WordPress para una administración sostenible de contenido corporativo.",
+          "Incluir responsabilidad operativa de despliegue y mantenimiento sobre AWS y Bitnami mediante SSH."
+        ],
+        "outcome": "Una plataforma corporativa que une mejora visual, implementación web y responsabilidad técnica de operación.",
+        "gallery": [
+          {
+            "src": "/images/projects/congero-overview.jpg",
+            "alt": "Página de Congero Technology Group con servicios de transformación digital.",
+            "caption": "Implementación WordPress y operación técnica para una empresa de tecnología global."
+          }
+        ]
+      },
+      "en": {
+        "title": "Congero Technology Group",
+        "summary": "An initial design evolved into a production WordPress solution for a digital transformation company.",
+        "challenge": "Turn an initial visual direction into a real web solution while taking operational responsibility for its AWS infrastructure.",
+        "role": "Design refinement, WordPress implementation, and technical operation through AWS, Bitnami, and SSH server access.",
+        "solution": "Refined the original experience and built a WordPress implementation ready for corporate content and ongoing operation.",
+        "alt": "Congero Technology Group page about digital transformation solutions.",
+        "unavailableLinkLabel": "Live site unavailable",
+        "decisions": [
+          "Refined the initial design so it worked as a clear, adaptable web experience.",
+          "Built on WordPress for sustainable management of corporate content.",
+          "Included operational responsibility for deployment and maintenance on AWS and Bitnami through SSH."
+        ],
+        "outcome": "A corporate platform combining visual refinement, web implementation, and technical operations responsibility.",
+        "gallery": [
+          {
+            "src": "/images/projects/congero-overview.jpg",
+            "alt": "Congero Technology Group page featuring digital transformation services.",
+            "caption": "WordPress implementation and technical operations for a global technology company."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "biophilia-park",
+    "slug": "biophilia-park",
+    "order": 5,
+    "featured": false,
+    "caseStudy": false,
+    "year": "2025",
+    "disciplines": ["Web design", "Responsive implementation"],
+    "technologies": ["WordPress", "Elementor"],
+    "image": "/images/projects/biophilia-overview.jpg",
+    "liveUrl": "https://biophiliapark.com/",
+    "translations": {
+      "es": {
+        "title": "Biophilia Park",
+        "summary": "Diseño web y construcción en WordPress para una experiencia de naturaleza y hospitalidad.",
+        "challenge": "Presentar una propuesta de parque y hospedaje de forma clara y atractiva en distintos dispositivos.",
+        "role": "Diseño web e implementación con WordPress y Elementor.",
+        "solution": "Una presencia responsiva que organiza la información de la experiencia y facilita su exploración.",
+        "alt": "Página de Biophilia Park.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible"
+      },
+      "en": {
+        "title": "Biophilia Park",
+        "summary": "Web design and WordPress build for a nature and hospitality experience.",
+        "challenge": "Present a park and lodging proposition clearly and engagingly across devices.",
+        "role": "Web design and implementation with WordPress and Elementor.",
+        "solution": "A responsive presence that organizes the experience information and makes it easy to explore.",
+        "alt": "Biophilia Park website.",
+        "unavailableLinkLabel": "Live site unavailable"
+      }
+    }
+  },
+  {
+    "id": "raindrop-spa",
+    "slug": "raindrop-spa",
+    "order": 6,
+    "featured": false,
+    "caseStudy": false,
+    "year": "2025",
+    "disciplines": ["Web design", "Responsive implementation"],
+    "technologies": ["WordPress", "Elementor"],
+    "image": "/images/projects/raindrop-overview.jpg",
+    "liveUrl": "https://raindropspa.com/",
+    "translations": {
+      "es": {
+        "title": "Raindrop Spa",
+        "summary": "Diseño web para presentar servicios de bienestar en una experiencia digital clara y serena.",
+        "challenge": "Traducir una propuesta de spa y bienestar a una presencia web accesible y fácil de recorrer.",
+        "role": "Diseño web e implementación con WordPress y Elementor.",
+        "solution": "Una estructura responsiva que ordena servicios e información de contacto para facilitar el siguiente paso.",
+        "alt": "Página de Raindrop Spa.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible"
+      },
+      "en": {
+        "title": "Raindrop Spa",
+        "summary": "Web design presenting wellness services through a clear, calm digital experience.",
+        "challenge": "Translate a spa and wellness offering into an accessible, easy-to-navigate web presence.",
+        "role": "Web design and implementation with WordPress and Elementor.",
+        "solution": "A responsive structure that organizes services and contact information around a clear next step.",
+        "alt": "Raindrop Spa website.",
+        "unavailableLinkLabel": "Live site unavailable"
+      }
+    }
+  },
+  {
+    "id": "francisco-saco",
+    "slug": "francisco-saco",
+    "order": 7,
+    "featured": false,
+    "caseStudy": false,
+    "year": "2025",
+    "disciplines": ["Front-end development", "Responsive interface"],
+    "technologies": ["React", "TypeScript", "Vite"],
+    "image": "/images/projects/francisco-saco-overview.jpg",
+    "liveUrl": "https://franciscosaco.com/",
+    "translations": {
+      "es": {
+        "title": "Francisco Saco",
+        "summary": "Una interfaz web contemporánea construida con React, TypeScript y Vite.",
+        "challenge": "Crear una experiencia web moderna y responsiva para presentar el trabajo de Francisco Saco.",
+        "role": "Desarrollo front-end con React, TypeScript y Vite.",
+        "solution": "Una implementación ligera y adaptable centrada en la presentación del contenido y la experiencia de navegación.",
+        "alt": "Sitio web de Francisco Saco.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible"
+      },
+      "en": {
+        "title": "Francisco Saco",
+        "summary": "A contemporary web interface built with React, TypeScript, and Vite.",
+        "challenge": "Create a modern, responsive web experience to present Francisco Saco's work.",
+        "role": "Front-end development with React, TypeScript, and Vite.",
+        "solution": "A lightweight, adaptable implementation focused on content presentation and navigation experience.",
+        "alt": "Francisco Saco website.",
+        "unavailableLinkLabel": "Live site unavailable"
+      }
+    }
+  }
+]
