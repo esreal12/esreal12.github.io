@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { profile } from '../../data/profile';
+import { isLocale, LOCALES } from '../../lib/locale';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const localeParam = Astro.params.locale ?? '';
+if (!isLocale(localeParam)) {
+  return new Response(null, { status: 404 });
+}
+
+const locale = localeParam;
+const copy = profile.locales[locale];
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${profile.name} — ${profile.mark}`}
+  description={copy.home.description}
+  canonicalPath={`/${locale}/`}
+>
+  <section class="shell-intro container">
+    <p class="eyebrow">{copy.home.eyebrow}</p>
+    <h1>{copy.home.title}</h1>
+    <p>{copy.home.description}</p>
+  </section>
+</BaseLayout>

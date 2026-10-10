@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/profile';
+import { type Locale } from '../lib/locale';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  canonicalPath: string;
+}
+
+const { locale, title, description, canonicalPath } = Astro.props;
+const origin = Astro.site ?? new URL('https://work.soluciondigital.cr');
+const absoluteUrl = (path: string) => new URL(path, origin).toString();
+const alternateLocale: Locale = locale === 'es' ? 'en' : 'es';
+const alternatePath = canonicalPath.replace(/^\/(es|en)(?=\/)/, `/${alternateLocale}`);
+const copy = profile.locales[locale];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={absoluteUrl(canonicalPath)} />
+    <link rel="alternate" hreflang={locale} href={absoluteUrl(canonicalPath)} />
+    <link rel="alternate" hreflang={alternateLocale} href={absoluteUrl(alternatePath)} />
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl('/es/')} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{copy.skipLink}</a>
+    <SiteHeader locale={locale} currentPath={Astro.url.pathname} />
+    <main id="main-content">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} />
+  </body>
+</html>

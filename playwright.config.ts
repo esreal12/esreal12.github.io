@@ -7,8 +7,8 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: 'npm run preview -- --host 127.0.0.1 --port 4321',
-    url: 'http://127.0.0.1:4321',
+    command: './node_modules/.bin/vite preview --host 127.0.0.1 --port 4321 --outDir dist',
+    url: 'http://127.0.0.1:4321/es/',
     reuseExistingServer: !process.env.CI,
   },
 });
