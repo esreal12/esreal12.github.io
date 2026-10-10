@@ -1,5 +1,6 @@
 ---
 import { LOCALES, switchLocalePath, type Locale } from '../lib/locale';
+import { sitePath } from '../lib/site-path';
 
 interface Props {
   locale: Locale;
@@ -9,12 +10,13 @@ interface Props {
 
 const { locale, currentPath, knownSlugs = [] } = Astro.props;
 const knownProjectSlugs = new Set(knownSlugs);
+const base = import.meta.env.BASE_URL;
 ---
 
 <nav class="language-switcher" aria-label="Language">
   {LOCALES.map((targetLocale) => (
     <a
-      href={switchLocalePath(currentPath, targetLocale, knownProjectSlugs)}
+      href={sitePath(switchLocalePath(currentPath, targetLocale, knownProjectSlugs), base)}
       aria-current={targetLocale === locale ? 'page' : undefined}
     >
       {targetLocale.toUpperCase()}

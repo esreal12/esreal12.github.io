@@ -6,6 +6,7 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import { profile } from '../../data/profile';
 import { isLocale, LOCALES } from '../../lib/locale';
 import { getFeaturedProjects } from '../../lib/projects';
+import { sitePath } from '../../lib/site-path';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -19,6 +20,7 @@ if (!isLocale(localeParam)) {
 const locale = localeParam;
 const copy = profile.locales[locale];
 const featuredProjects = getFeaturedProjects((await getCollection('projects')).map((entry) => entry.data));
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -31,7 +33,7 @@ const featuredProjects = getFeaturedProjects((await getCollection('projects')).m
     <p class="eyebrow">{copy.home.eyebrow}</p>
     <h1>{copy.home.title}</h1>
     <p>{copy.home.description}</p>
-    <a class="primary-action" href={`/${locale}/work/`}>{copy.home.primaryAction}</a>
+    <a class="primary-action" href={sitePath(`/${locale}/work/`, base)}>{copy.home.primaryAction}</a>
   </section>
   <section class="home-section container">
     <p class="eyebrow">{copy.home.selectedWork}</p>
@@ -41,6 +43,6 @@ const featuredProjects = getFeaturedProjects((await getCollection('projects')).m
     <p class="eyebrow">{copy.home.capabilities}</p>
     <div class="capability-grid">{copy.capabilities.map((capability) => <article><h2>{capability.title}</h2><p>{capability.description}</p></article>)}</div>
   </section>
-  <section class="home-section container narrative-block"><p class="eyebrow">{copy.home.experience}</p><h2>{copy.experience.title}</h2><p>{copy.experience.body}</p><a href={`/${locale}/about/`}>{locale === 'es' ? 'Conocer mi trayectoria' : 'Read my story'}</a></section>
+  <section class="home-section container narrative-block"><p class="eyebrow">{copy.home.experience}</p><h2>{copy.experience.title}</h2><p>{copy.experience.body}</p><a href={sitePath(`/${locale}/about/`, base)}>{locale === 'es' ? 'Conocer mi trayectoria' : 'Read my story'}</a></section>
   <section class="home-section container narrative-block"><p class="eyebrow">{copy.home.contact}</p><ContactLinks locale={locale} /></section>
 </BaseLayout>

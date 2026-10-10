@@ -1,3 +1,5 @@
 ---
-return Astro.redirect('/es/');
+import { sitePath } from '../lib/site-path';
+
+return Astro.redirect(sitePath('/es/', import.meta.env.BASE_URL));
 ---

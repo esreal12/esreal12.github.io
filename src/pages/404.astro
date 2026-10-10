@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import { sitePath } from '../lib/site-path';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -16,13 +19,13 @@ import '../styles/global.css';
         <p class="eyebrow">404</p>
         <h1>Página no encontrada</h1>
         <p>El enlace no lleva a un proyecto publicado. Puedes volver a la selección de trabajo.</p>
-        <a href="/es/work/">Explorar proyectos</a>
+        <a href={sitePath('/es/work/', base)}>Explorar proyectos</a>
       </section>
       <section lang="en">
         <p class="eyebrow">404</p>
         <h2>Page not found</h2>
         <p>This link does not lead to a published project. You can return to the selected work.</p>
-        <a href="/en/work/">Explore work</a>
+        <a href={sitePath('/en/work/', base)}>Explore work</a>
       </section>
     </main>
   </body>

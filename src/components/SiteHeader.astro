@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { profile } from '../data/profile';
 import { localizedPath, type Locale } from '../lib/locale';
+import { sitePath } from '../lib/site-path';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
 interface Props {
@@ -13,18 +14,20 @@ const { locale, currentPath } = Astro.props;
 const copy = profile.locales[locale];
 const projects = await getCollection('projects');
 const knownSlugs = projects.map((project) => project.data.slug);
+const base = import.meta.env.BASE_URL;
+const route = (path: string) => sitePath(path, base);
 ---
 
 <header class="site-header">
-  <a class="wordmark" href={localizedPath(locale)} aria-label={`${profile.name} — ${profile.mark}`}>
+  <a class="wordmark" href={route(localizedPath(locale))} aria-label={`${profile.name} — ${profile.mark}`}>
     <span>{profile.name}</span>
     <small>{profile.mark}</small>
   </a>
   <div class="header-actions">
     <nav class="primary-nav" aria-label="Primary navigation">
-      <a href={localizedPath(locale, 'work')}>{copy.navigation.work}</a>
-      <a href={localizedPath(locale, 'about')}>{copy.navigation.about}</a>
-      <a href={localizedPath(locale, 'contact')}>{copy.navigation.contact}</a>
+      <a href={route(localizedPath(locale, 'work'))}>{copy.navigation.work}</a>
+      <a href={route(localizedPath(locale, 'about'))}>{copy.navigation.about}</a>
+      <a href={route(localizedPath(locale, 'contact'))}>{copy.navigation.contact}</a>
     </nav>
     <LanguageSwitcher locale={locale} currentPath={currentPath} knownSlugs={knownSlugs} />
   </div>

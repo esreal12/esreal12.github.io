@@ -1,6 +1,7 @@
 import type { Locale } from './locale';
+import { sitePath } from './site-path';
 
-const siteOrigin = new URL('https://work.soluciondigital.cr');
+const defaultSiteOrigin = new URL('https://work.soluciondigital.cr');
 
 type SeoInput = {
   locale: Locale;
@@ -8,21 +9,24 @@ type SeoInput = {
   description: string;
   canonicalPath: string;
   imagePath?: string;
+  origin?: URL;
+  base?: string;
 };
 
-const absoluteUrl = (path: string) => new URL(path, siteOrigin).toString();
+const absoluteUrl = (path: string, origin: URL, base: string) => new URL(sitePath(path, base), origin).toString();
 
-export function buildSeo({ locale, title, description, canonicalPath, imagePath = '/social/default-og.jpg' }: SeoInput) {
+export function buildSeo({ locale, title, description, canonicalPath, imagePath = '/social/default-og.jpg', origin = defaultSiteOrigin, base = '/' }: SeoInput) {
   const alternateLocale: Locale = locale === 'es' ? 'en' : 'es';
   const alternatePath = canonicalPath.replace(/^\/(es|en)(?=\/)/, `/${alternateLocale}`);
 
   return {
     title,
     description,
-    canonicalUrl: absoluteUrl(canonicalPath),
-    imageUrl: absoluteUrl(imagePath),
+    canonicalUrl: absoluteUrl(canonicalPath, origin, base),
+    imageUrl: absoluteUrl(imagePath, origin, base),
     alternateLocale,
-    alternateUrl: absoluteUrl(alternatePath),
+    alternateUrl: absoluteUrl(alternatePath, origin, base),
+    defaultLocaleUrl: absoluteUrl('/es/', origin, base),
     localeCode: locale === 'es' ? 'es_CR' : 'en_US',
   };
 }

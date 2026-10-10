@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { profile } from '../data/profile';
 import { type Locale } from '../lib/locale';
 import { buildSeo } from '../lib/seo';
+import { sitePath } from '../lib/site-path';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
@@ -15,7 +16,11 @@ interface Props {
 }
 
 const { locale, title, description, canonicalPath, imagePath } = Astro.props;
-const seo = buildSeo({ locale, title, description, canonicalPath, imagePath });
+const base = import.meta.env.BASE_URL;
+const seo = buildSeo({ locale, title, description, canonicalPath, imagePath, origin: Astro.site, base });
+const currentPath = base === '/'
+  ? Astro.url.pathname
+  : `/${Astro.url.pathname.slice(base.length).replace(/^\/+/, '')}`;
 const copy = profile.locales[locale];
 ---
 
@@ -25,11 +30,11 @@ const copy = profile.locales[locale];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={seo.description} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={sitePath('/favicon.svg', base)} type="image/svg+xml" />
     <link rel="canonical" href={seo.canonicalUrl} />
     <link rel="alternate" hreflang={locale} href={seo.canonicalUrl} />
     <link rel="alternate" hreflang={seo.alternateLocale} href={seo.alternateUrl} />
-    <link rel="alternate" hreflang="x-default" href="https://work.soluciondigital.cr/es/" />
+    <link rel="alternate" hreflang="x-default" href={seo.defaultLocaleUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={seo.localeCode} />
     <meta property="og:title" content={seo.title} />
@@ -45,7 +50,7 @@ const copy = profile.locales[locale];
   </head>
   <body>
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>
-    <SiteHeader locale={locale} currentPath={Astro.url.pathname} />
+    <SiteHeader locale={locale} currentPath={currentPath} />
     <main id="main-content">
       <slot />
     </main>
