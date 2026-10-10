@@ -62,3 +62,12 @@ test('contact page exposes scheduling, email, and LinkedIn', async ({ page }) =>
   await expect(main.getByRole('link', { name: /email/i })).toHaveAttribute('href', /mailto:/);
   await expect(main.getByRole('link', { name: /linkedin/i })).toHaveAttribute('href', /linkedin\.com/);
 });
+
+test('a Spanish case emits localized SEO and complete image alternatives', async ({ page }) => {
+  await page.goto('/es/work/kajual-gastronomia/');
+
+  await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
+  await expect(page.locator('meta[property="og:description"]')).toHaveCount(1);
+  await expect(page.locator('meta[property="og:image"]')).toHaveCount(1);
+  await expect(page.locator('img[alt=""]')).toHaveCount(0);
+});

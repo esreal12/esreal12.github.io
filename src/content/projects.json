@@ -240,7 +240,7 @@
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
     "technologies": ["WordPress", "Elementor"],
-    "image": "/images/projects/biophilia-overview.jpg",
+    "image": "/images/projects/biophilia-cover.svg",
     "liveUrl": "https://biophiliapark.com/",
     "translations": {
       "es": {
@@ -304,7 +304,7 @@
     "year": "2025",
     "disciplines": ["Front-end development", "Responsive interface"],
     "technologies": ["React", "TypeScript", "Vite"],
-    "image": "/images/projects/francisco-saco-overview.jpg",
+    "image": "/images/projects/francisco-saco-cover.svg",
     "liveUrl": "https://franciscosaco.com/",
     "translations": {
       "es": {

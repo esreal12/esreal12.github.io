@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Biophilia Park</title>
+  <desc id="description">Cubierta tipográfica para Biophilia Park.</desc>
+  <rect width="1600" height="1000" fill="#1f352f"/>
+  <path d="M0 740C300 610 460 830 760 680s490-110 840-260v580H0Z" fill="#789672" opacity=".6"/>
+  <path d="M0 810c360-170 520 30 850-120s480-210 750-150v460H0Z" fill="#c6d29f" opacity=".8"/>
+  <text x="120" y="430" fill="#fffdf8" font-family="Arial, sans-serif" font-size="108" font-weight="700">BIOPHILIA</text>
+  <text x="125" y="540" fill="#dce9c6" font-family="Arial, sans-serif" font-size="88" letter-spacing="14">PARK</text>
+  <text x="125" y="650" fill="#fffdf8" font-family="Arial, sans-serif" font-size="32">WEB DESIGN · WORDPRESS · ELEMENTOR</text>
+</svg>

@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { profile } from '../data/profile';
 import { type Locale } from '../lib/locale';
+import { buildSeo } from '../lib/seo';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
@@ -10,13 +11,11 @@ interface Props {
   title: string;
   description: string;
   canonicalPath: string;
+  imagePath?: string;
 }
 
-const { locale, title, description, canonicalPath } = Astro.props;
-const origin = Astro.site ?? new URL('https://work.soluciondigital.cr');
-const absoluteUrl = (path: string) => new URL(path, origin).toString();
-const alternateLocale: Locale = locale === 'es' ? 'en' : 'es';
-const alternatePath = canonicalPath.replace(/^\/(es|en)(?=\/)/, `/${alternateLocale}`);
+const { locale, title, description, canonicalPath, imagePath } = Astro.props;
+const seo = buildSeo({ locale, title, description, canonicalPath, imagePath });
 const copy = profile.locales[locale];
 ---
 
@@ -25,12 +24,24 @@ const copy = profile.locales[locale];
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <link rel="canonical" href={absoluteUrl(canonicalPath)} />
-    <link rel="alternate" hreflang={locale} href={absoluteUrl(canonicalPath)} />
-    <link rel="alternate" hreflang={alternateLocale} href={absoluteUrl(alternatePath)} />
-    <link rel="alternate" hreflang="x-default" href={absoluteUrl('/es/')} />
-    <title>{title}</title>
+    <meta name="description" content={seo.description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={seo.canonicalUrl} />
+    <link rel="alternate" hreflang={locale} href={seo.canonicalUrl} />
+    <link rel="alternate" hreflang={seo.alternateLocale} href={seo.alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href="https://work.soluciondigital.cr/es/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={seo.localeCode} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:url" content={seo.canonicalUrl} />
+    <meta property="og:image" content={seo.imageUrl} />
+    <meta property="og:image:alt" content={seo.title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={seo.imageUrl} />
+    <title>{seo.title}</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">{copy.skipLink}</a>

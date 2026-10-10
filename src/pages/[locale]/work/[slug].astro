@@ -34,7 +34,7 @@ const copy = project.translations[locale];
 const navigationCopy = locale === 'es' ? { previous: 'Proyecto anterior', next: 'Siguiente proyecto' } : { previous: 'Previous project', next: 'Next project' };
 ---
 
-<BaseLayout locale={locale} title={`${copy.title} — Andrés Israel Umaña Sedó`} description={copy.summary} canonicalPath={`/${locale}/work/${project.slug}/`}>
+<BaseLayout locale={locale} title={`${copy.title} — Andrés Israel Umaña Sedó`} description={copy.summary} canonicalPath={`/${locale}/work/${project.slug}/`} imagePath={project.image}>
   <CaseStudy locale={locale} project={project as ProjectRecord} />
   <nav class="case-pagination container" aria-label="Project navigation">
     {previousProject && <a href={`/${locale}/work/${previousProject.slug}/`}>← {navigationCopy.previous}</a>}
