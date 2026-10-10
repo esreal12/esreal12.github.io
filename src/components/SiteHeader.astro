@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import { profile } from '../data/profile';
+import { localizedPath, type Locale } from '../lib/locale';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const copy = profile.locales[locale];
+const projects = await getCollection('projects');
+const knownSlugs = projects.map((project) => project.data.slug);
+---
+
+<header class="site-header">
+  <a class="wordmark" href={localizedPath(locale)} aria-label={`${profile.name} — ${profile.mark}`}>
+    <span>{profile.name}</span>
+    <small>{profile.mark}</small>
+  </a>
+  <div class="header-actions">
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href={localizedPath(locale, 'work')}>{copy.navigation.work}</a>
+      <a href={localizedPath(locale, 'about')}>{copy.navigation.about}</a>
+      <a href={localizedPath(locale, 'contact')}>{copy.navigation.contact}</a>
+    </nav>
+    <LanguageSwitcher locale={locale} currentPath={currentPath} knownSlugs={knownSlugs} />
+  </div>
+</header>

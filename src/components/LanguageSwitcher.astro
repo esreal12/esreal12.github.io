@@ -1,0 +1,23 @@
+---
+import { LOCALES, switchLocalePath, type Locale } from '../lib/locale';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+  knownSlugs?: string[];
+}
+
+const { locale, currentPath, knownSlugs = [] } = Astro.props;
+const knownProjectSlugs = new Set(knownSlugs);
+---
+
+<nav class="language-switcher" aria-label="Language">
+  {LOCALES.map((targetLocale) => (
+    <a
+      href={switchLocalePath(currentPath, targetLocale, knownProjectSlugs)}
+      aria-current={targetLocale === locale ? 'page' : undefined}
+    >
+      {targetLocale.toUpperCase()}
+    </a>
+  ))}
+</nav>

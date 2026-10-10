@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../lib/locale';
+import { getLiveLink, type ProjectRecord } from '../lib/projects';
+import ProjectGallery from './ProjectGallery.astro';
+
+interface Props {
+  locale: Locale;
+  project: ProjectRecord;
+}
+
+const { locale, project } = Astro.props;
+const copy = project.translations[locale];
+const liveUrl = getLiveLink(project);
+const labels = locale === 'es'
+  ? { role: 'Rol y alcance', challenge: 'El reto', solution: 'La solución', decisions: 'Decisiones clave', outcome: 'Resultado', technologies: 'Tecnologías', live: 'Visitar sitio' }
+  : { role: 'Role and scope', challenge: 'The challenge', solution: 'The solution', decisions: 'Key decisions', outcome: 'Outcome', technologies: 'Technologies', live: 'Visit site' };
+---
+
+<article class="case-study container">
+  <header class="case-hero">
+    <p class="eyebrow">{project.disciplines.join(' · ')}</p>
+    <h1>{copy.title}</h1>
+    <p class="case-summary">{copy.summary}</p>
+    <dl class="case-facts">
+      <div><dt>{locale === 'es' ? 'Año' : 'Year'}</dt><dd>{project.year}</dd></div>
+      <div><dt>{labels.technologies}</dt><dd>{project.technologies.join(' · ')}</dd></div>
+    </dl>
+  </header>
+
+  <figure class="case-visual">
+    <img src={project.image} alt={copy.alt} width="1600" height="1000" loading="eager" />
+  </figure>
+
+  <div class="case-sections">
+    <section><h2>{labels.role}</h2><p>{copy.role}</p></section>
+    {project.caseStudy && (
+      <>
+        <section><h2>{labels.challenge}</h2><p>{copy.challenge}</p></section>
+        <section><h2>{labels.solution}</h2><p>{copy.solution}</p></section>
+        {copy.decisions && (
+          <section data-testid="case-decisions"><h2>{labels.decisions}</h2><ul>{copy.decisions.map((decision) => <li>{decision}</li>)}</ul></section>
+        )}
+        {copy.outcome && (
+          <section data-testid="case-outcome"><h2>{labels.outcome}</h2><p>{copy.outcome}</p></section>
+        )}
+      </>
+    )}
+  </div>
+
+  {project.caseStudy && copy.gallery && <ProjectGallery items={copy.gallery} />}
+
+  <div class="case-live-link">
+    {liveUrl ? <a href={liveUrl} rel="noreferrer" target="_blank">{labels.live}</a> : <span>{copy.unavailableLinkLabel}</span>}
+  </div>
+</article>
