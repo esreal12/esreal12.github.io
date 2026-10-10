@@ -1,0 +1,3 @@
+# Applies only when this static site is served from an Apache-compatible dedicated document root.
+Options -MultiViews
+ErrorDocument 404 /404.html

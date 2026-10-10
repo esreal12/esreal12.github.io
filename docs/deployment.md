@@ -19,6 +19,7 @@ The generated site is in `dist/`. The deployment script deliberately refuses to 
 DEPLOY_HOST='host.example' \
 DEPLOY_USER='deploy-user' \
 DEPLOY_PATH='/absolute/web/root' \
+DEPLOY_CONFIRM='dedicated-portfolio-root' \
 bash scripts/deploy-static.sh
 ```
 
@@ -29,6 +30,8 @@ The upload uses `rsync --delete`; the target directory must be the dedicated doc
 The available SSH account was reviewed on 2026-10-10. It is a managed/shared hosting account with no `sudo` command and no user-visible Caddy or Nginx service. Therefore no reverse-proxy configuration or TLS change has been attempted.
 
 Before the first deployment, create and confirm a dedicated document root for `work.soluciondigital.cr` in the hosting control panel, confirm that the DNS record resolves there, and provide the resulting values only in the shell command above. The existing `soluciondigital.cr` virtual host remains out of scope.
+
+For this managed host, the built upload includes `.htaccess` with `ErrorDocument 404 /404.html`. Confirm that the subdomain’s web server honors it. If the control panel requires a custom error-page setting instead, map status `404` to the uploaded `404.html` for this subdomain only. Do not launch until a missing path returns HTTP `404` and displays the portfolio recovery page.
 
 ## Verification after upload
 

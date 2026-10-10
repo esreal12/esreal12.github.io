@@ -49,6 +49,7 @@ Deployment instructions are in [`docs/deployment.md`](docs/deployment.md). The u
 DEPLOY_HOST='host.example' \
 DEPLOY_USER='deploy-user' \
 DEPLOY_PATH='/absolute/web/root' \
+DEPLOY_CONFIRM='dedicated-portfolio-root' \
 bash scripts/deploy-static.sh
 ```
 

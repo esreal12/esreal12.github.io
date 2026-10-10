@@ -40,10 +40,28 @@ test('featured case study renders role, decisions, outcome, and gallery', async 
 });
 
 test('unknown work slug does not expose another project', async ({ page }) => {
-  await page.goto('/es/work/no-existe/');
+  const response = await page.goto('/es/work/no-existe/');
 
+  expect(response?.status()).toBe(404);
   await expect(page.getByRole('heading', { name: /página no encontrada/i })).toBeVisible();
   await expect(page.getByRole('link', { name: /explorar proyectos/i })).toHaveAttribute('href', '/es/work/');
+});
+
+test('malformed project paths render the localized 404 recovery response', async ({ page }) => {
+  const response = await page.goto('/es/work/not%2Fa-real-project/');
+
+  expect(response?.status()).toBe(404);
+  await expect(page.getByRole('heading', { name: /página no encontrada/i })).toBeVisible();
+});
+
+test('short profiles show their visual and omit full-case narrative sections', async ({ page }) => {
+  const response = await page.goto('/es/work/biophilia-park/');
+
+  expect(response?.status()).toBe(200);
+  await expect(page.getByRole('img', { name: /cubierta tipográfica.*biophilia/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /el reto/i })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: /la solución/i })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: /rol y alcance/i })).toBeVisible();
 });
 
 test('homepage uses one primary project action and never asks visitors to self-segment', async ({ page }) => {

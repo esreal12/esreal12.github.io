@@ -180,52 +180,52 @@
     "featured": true,
     "caseStudy": true,
     "year": "2026",
-    "disciplines": ["WordPress development", "Design refinement", "Cloud operations"],
-    "technologies": ["WordPress", "AWS", "Bitnami", "SSH", "Linux"],
+    "disciplines": ["WordPress development", "Design refinement", "Production support"],
+    "technologies": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     "image": "/images/projects/congero-overview.jpg",
     "liveUrl": "https://congerotechnology.com/",
     "translations": {
       "es": {
         "title": "Congero Technology Group",
         "summary": "Evolución de un diseño inicial hacia una solución WordPress lista para una empresa de transformación digital.",
-        "challenge": "Convertir una dirección visual inicial en una solución web real y mantenerla con responsabilidad operativa sobre infraestructura en AWS.",
-        "role": "Mejora de diseño, implementación WordPress y operación técnica mediante AWS, Bitnami y acceso SSH de servidor.",
+        "challenge": "Convertir una dirección visual inicial en una solución web real, clara y sostenible para el contenido corporativo.",
+        "role": "Mejora de diseño, implementación WordPress y soporte técnico de producción.",
         "solution": "Ajuste de la experiencia presentada originalmente y desarrollo de una implementación WordPress preparada para contenido corporativo y operación continua.",
         "alt": "Página de Congero Technology Group sobre soluciones de transformación digital.",
         "unavailableLinkLabel": "Sitio en vivo no disponible",
         "decisions": [
           "Refinar el diseño inicial para que funcionara como una experiencia web clara y adaptable.",
           "Construir la solución en WordPress para una administración sostenible de contenido corporativo.",
-          "Incluir responsabilidad operativa de despliegue y mantenimiento sobre AWS y Bitnami mediante SSH."
+          "Acompañar la continuidad técnica de la plataforma después de su lanzamiento."
         ],
-        "outcome": "Una plataforma corporativa que une mejora visual, implementación web y responsabilidad técnica de operación.",
+        "outcome": "Una plataforma corporativa que une mejora visual, implementación web y continuidad técnica.",
         "gallery": [
           {
             "src": "/images/projects/congero-overview.jpg",
             "alt": "Página de Congero Technology Group con servicios de transformación digital.",
-            "caption": "Implementación WordPress y operación técnica para una empresa de tecnología global."
+            "caption": "Implementación WordPress y soporte de producción para una empresa de tecnología global."
           }
         ]
       },
       "en": {
         "title": "Congero Technology Group",
         "summary": "An initial design evolved into a production WordPress solution for a digital transformation company.",
-        "challenge": "Turn an initial visual direction into a real web solution while taking operational responsibility for its AWS infrastructure.",
-        "role": "Design refinement, WordPress implementation, and technical operation through AWS, Bitnami, and SSH server access.",
+        "challenge": "Turn an initial visual direction into a real, clear, and sustainable web solution for corporate content.",
+        "role": "Design refinement, WordPress implementation, and production technical support.",
         "solution": "Refined the original experience and built a WordPress implementation ready for corporate content and ongoing operation.",
         "alt": "Congero Technology Group page about digital transformation solutions.",
         "unavailableLinkLabel": "Live site unavailable",
         "decisions": [
           "Refined the initial design so it worked as a clear, adaptable web experience.",
           "Built on WordPress for sustainable management of corporate content.",
-          "Included operational responsibility for deployment and maintenance on AWS and Bitnami through SSH."
+          "Supported the platform's technical continuity after launch."
         ],
-        "outcome": "A corporate platform combining visual refinement, web implementation, and technical operations responsibility.",
+        "outcome": "A corporate platform combining visual refinement, web implementation, and technical continuity.",
         "gallery": [
           {
             "src": "/images/projects/congero-overview.jpg",
             "alt": "Congero Technology Group page featuring digital transformation services.",
-            "caption": "WordPress implementation and technical operations for a global technology company."
+            "caption": "WordPress implementation and production support for a global technology company."
           }
         ]
       }
@@ -249,7 +249,7 @@
         "challenge": "Presentar una propuesta de parque y hospedaje de forma clara y atractiva en distintos dispositivos.",
         "role": "Diseño web e implementación con WordPress y Elementor.",
         "solution": "Una presencia responsiva que organiza la información de la experiencia y facilita su exploración.",
-        "alt": "Página de Biophilia Park.",
+        "alt": "Cubierta tipográfica del portafolio para Biophilia Park.",
         "unavailableLinkLabel": "Sitio en vivo no disponible"
       },
       "en": {
@@ -258,7 +258,7 @@
         "challenge": "Present a park and lodging proposition clearly and engagingly across devices.",
         "role": "Web design and implementation with WordPress and Elementor.",
         "solution": "A responsive presence that organizes the experience information and makes it easy to explore.",
-        "alt": "Biophilia Park website.",
+        "alt": "Portfolio typographic cover for Biophilia Park.",
         "unavailableLinkLabel": "Live site unavailable"
       }
     }
@@ -313,7 +313,7 @@
         "challenge": "Crear una experiencia web moderna y responsiva para presentar el trabajo de Francisco Saco.",
         "role": "Desarrollo front-end con React, TypeScript y Vite.",
         "solution": "Una implementación ligera y adaptable centrada en la presentación del contenido y la experiencia de navegación.",
-        "alt": "Sitio web de Francisco Saco.",
+        "alt": "Cubierta tipográfica del portafolio para Francisco Saco.",
         "unavailableLinkLabel": "Sitio en vivo no disponible"
       },
       "en": {
@@ -322,7 +322,7 @@
         "challenge": "Create a modern, responsive web experience to present Francisco Saco's work.",
         "role": "Front-end development with React, TypeScript, and Vite.",
         "solution": "A lightweight, adaptable implementation focused on content presentation and navigation experience.",
-        "alt": "Francisco Saco website.",
+        "alt": "Portfolio typographic cover for Francisco Saco.",
         "unavailableLinkLabel": "Live site unavailable"
       }
     }
