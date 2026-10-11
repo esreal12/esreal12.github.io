@@ -1,5 +1,20 @@
 import { expect, test } from '@playwright/test';
 
+test('the site root prioritizes English', async ({ page }) => {
+  await page.goto('/');
+
+  await expect(page).toHaveURL(/\/en\/$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+});
+
+test('about introduces Andrés with a portrait and downloadable CV', async ({ page }) => {
+  await page.goto('/en/about/');
+
+  await expect(page.getByRole('img', { name: /Andrés Israel Umaña Sedó/i })).toBeVisible();
+  await expect(page.getByRole('link', { name: /download cv/i })).toHaveAttribute('href', /andres-israel-umana-sedo-cv\.pdf$/);
+  await expect(page.getByRole('link', { name: /download cv/i })).toHaveAttribute('download', '');
+});
+
 test('Spanish homepage exposes localized primary navigation and a language switch', async ({
   page,
 }) => {

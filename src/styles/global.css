@@ -61,10 +61,11 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
 
 .site-header { min-height: 6.25rem; border-bottom: 1px dashed var(--line); }
 
-.wordmark { display: grid; gap: 0.1rem; font-weight: 700; text-decoration: none; }
+.wordmark { display: grid; gap: 0.18rem; font-size: clamp(1.05rem, 1.8vw, 1.35rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; text-decoration: none; }
 .wordmark small,
 .language-switcher,
 .eyebrow { font-family: 'Fira Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.wordmark small { font-size: 0.8rem; letter-spacing: 0.1em; }
 
 .header-actions { display: flex; align-items: center; gap: var(--space-2); }
 .primary-nav, .language-switcher { display: flex; flex-wrap: wrap; gap: var(--space-2); }
@@ -73,7 +74,7 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
 .language-switcher { padding-left: var(--space-2); border-left: 1px solid var(--line); }
 
 .shell-intro { display: grid; min-height: calc(100vh - 12.5rem); align-content: center; gap: var(--space-3); padding-block: var(--space-6); }
-.shell-intro h1 { max-width: 14ch; margin: 0; font-size: clamp(3rem, 9vw, 8rem); line-height: 0.92; letter-spacing: -0.06em; }
+.shell-intro h1 { max-width: 16ch; margin: 0; font-size: clamp(2.8rem, 7vw, 6.5rem); line-height: 0.94; letter-spacing: -0.055em; }
 .shell-intro p:not(.eyebrow) { max-width: 38rem; margin: 0; color: var(--ink-muted); font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.55; }
 .primary-action, .contact-links a { width: fit-content; padding: 0.85rem 1rem; border: 2px solid var(--ink); background: var(--lime); color: var(--ink); font-family: 'Fira Mono', monospace; font-size: 0.78rem; text-decoration: none; text-transform: uppercase; }
 .home-section { padding-block: var(--space-5); border-top: 1px dashed var(--line); }
@@ -85,6 +86,12 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
 .narrative-block a { width: fit-content; color: var(--ink); text-decoration-color: var(--orange); }
 .narrative-page { display: grid; align-content: center; gap: var(--space-2); min-height: calc(100vh - 12.5rem); padding-block: var(--space-5); max-width: 54rem; }
 .narrative-page h1 { margin: 0; font-size: clamp(3rem, 8vw, 7rem); line-height: 0.92; letter-spacing: -0.06em; }
+.about-page { display: grid; grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr); align-items: center; gap: clamp(var(--space-4), 7vw, var(--space-6)); min-height: calc(100vh - 12.5rem); padding-block: var(--space-5); }
+.about-portrait { overflow: hidden; background: var(--paper-deep); border: 1px dashed var(--line); }
+.about-portrait img { width: 100%; height: auto; display: block; aspect-ratio: 2 / 3; object-fit: cover; object-position: center; }
+.about-copy { display: grid; align-content: center; justify-items: start; gap: var(--space-2); max-width: 46rem; }
+.about-copy h1 { margin: 0; font-size: clamp(2.8rem, 6vw, 5.8rem); line-height: 0.94; letter-spacing: -0.055em; }
+.about-copy > p:not(.eyebrow) { margin: 0; color: var(--ink-muted); font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.55; }
 .contact-links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .eyebrow { margin: 0; color: var(--violet); }
 
@@ -145,7 +152,9 @@ a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.
   .site-footer { align-items: flex-start; flex-direction: column; }
   .project-grid { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: 1fr; }
-  .case-facts, .case-sections, .not-found { grid-template-columns: 1fr; }
+  .case-facts, .case-sections, .not-found, .about-page { grid-template-columns: 1fr; }
+  .about-page { min-height: auto; gap: var(--space-3); }
+  .about-portrait { width: min(100%, 28rem); }
   .case-pagination { flex-direction: column; }
 }
 
