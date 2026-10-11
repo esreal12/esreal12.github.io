@@ -39,6 +39,24 @@ test('work collection renders all seven records in English', async ({ page }) =>
   await expect(page.getByRole('heading', { name: /congero technology group/i })).toBeVisible();
 });
 
+test('project cards use the approved project captures', async ({ page }) => {
+  await page.goto('/en/work/');
+
+  await expect(page.locator('[data-project-card="kajual-gastronomia"] img')).toHaveAttribute('src', /kajual-capture\.png$/);
+  await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-capture\.jpg$/);
+  await expect(page.locator('[data-project-card="francisco-saco"] img')).toHaveAttribute('src', /francisco-saco-capture\.jpg$/);
+  await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+});
+
+test('Congero case study includes its hero and long-form captures', async ({ page }) => {
+  await page.goto('/en/work/congero-technology-group/');
+
+  const gallery = page.locator('.project-gallery');
+  await expect(gallery.locator('figure')).toHaveCount(2);
+  await expect(gallery.locator('img').nth(0)).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+  await expect(gallery.locator('img').nth(1)).toHaveAttribute('src', /congero-full-page-capture\.jpg$/);
+});
+
 test('work collection renders all seven records in Spanish', async ({ page }) => {
   await page.goto('/es/work/');
 
@@ -73,7 +91,7 @@ test('short profiles show their visual and omit full-case narrative sections', a
   const response = await page.goto('/es/work/biophilia-park/');
 
   expect(response?.status()).toBe(200);
-  await expect(page.getByRole('img', { name: /cubierta tipográfica.*biophilia/i })).toBeVisible();
+  await expect(page.getByRole('img', { name: /página de inicio.*biophilia/i })).toBeVisible();
   await expect(page.getByRole('heading', { name: /el reto/i })).toHaveCount(0);
   await expect(page.getByRole('heading', { name: /la solución/i })).toHaveCount(0);
   await expect(page.getByRole('heading', { name: /rol y alcance/i })).toBeVisible();

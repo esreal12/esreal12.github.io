@@ -1,15 +1,16 @@
 # Project imagery
 
-The portfolio uses compressed 1600 × 1000 visual evidence. Every screenshot is a first-party public page capture made on 2026-10-10 for portfolio documentation; no advertising dashboards, campaign data, or private client material is included.
+The portfolio uses compressed visual evidence. Every screenshot is a first-party public page capture made for portfolio documentation; no advertising dashboards, campaign data, or private client material is included.
 
 | File | Source / authorization | Notes |
 | --- | --- | --- |
 | `abc-overview.jpg` | Public homepage, `https://www.abc.fi.cr/` | Current public homepage capture. |
-| `kajual-overview.jpg` | Public homepage, `https://www.kajualgastronomia.com/` | Current public homepage capture. |
+| `kajual-capture.png` | User-provided capture of the public homepage, `https://www.kajualgastronomia.com/` | Current homepage showing the culinary offering. |
 | `estructuras-overview.jpg` | Public homepage, `https://estructurassa.com/` | Current public homepage capture. |
-| `congero-overview.jpg` | Public homepage, `https://congerotechnology.com/` | Current public loading state capture; replace when an approved production-page capture is available. |
-| `biophilia-cover.svg` | Portfolio-authored typographic cover | The public site presented an anti-bot verification page during capture. This cover is not a claim about the client site and should be replaced with a client-approved screenshot. |
+| `congero-hero-capture.jpg` | User-provided capture of the public homepage, `https://congerotechnology.com/` | Desktop hero capture used on the card and as the case-study lead visual. |
+| `congero-full-page-capture.jpg` | User-provided capture of the public homepage, `https://congerotechnology.com/` | Optimized full-page capture used in the case-study gallery. |
+| `biophilia-park-capture.jpg` | User-provided capture of the public homepage, `https://biophiliapark.com/` | Optimized crop of the public homepage hero. |
 | `raindrop-overview.jpg` | Public homepage, `https://raindropspa.com/` | Current public homepage capture. |
-| `francisco-saco-cover.svg` | Portfolio-authored typographic cover | The public site was loading remote video content without a representative frame during capture. This cover should be replaced with an approved still. |
+| `francisco-saco-capture.jpg` | User-provided capture of the public homepage, `https://franciscosaco.com/` | Optimized homepage capture. |
 
 Do not replace these files with raw screenshots or private material. Resize and compress new evidence before committing it, and retain the same bilingual alt-text standard in `src/content/projects.json`.

@@ -66,7 +66,7 @@
     "year": "2025",
     "disciplines": ["E-commerce", "Custom storefront development", "Reservations"],
     "technologies": ["Shopify", "Liquid", "HTML", "CSS", "JavaScript"],
-    "image": "/images/projects/kajual-overview.jpg",
+    "image": "/images/projects/kajual-capture.png",
     "liveUrl": "https://www.kajualgastronomia.com/",
     "translations": {
       "es": {
@@ -85,7 +85,7 @@
         "outcome": "Una plataforma comercial que reúne experiencias, servicios y productos en un solo recorrido de marca.",
         "gallery": [
           {
-            "src": "/images/projects/kajual-overview.jpg",
+            "src": "/images/projects/kajual-capture.png",
             "alt": "Página de Kajual Gastronomía con experiencias culinarias.",
             "caption": "Comercio y experiencias gastronómicas presentados en una misma plataforma."
           }
@@ -107,7 +107,7 @@
         "outcome": "A commerce platform bringing experiences, services, and products into one brand journey.",
         "gallery": [
           {
-            "src": "/images/projects/kajual-overview.jpg",
+            "src": "/images/projects/kajual-capture.png",
             "alt": "Kajual Gastronomía page featuring culinary experiences.",
             "caption": "Commerce and culinary experiences in one platform."
           }
@@ -182,7 +182,7 @@
     "year": "2026",
     "disciplines": ["WordPress development", "Design refinement", "Production support"],
     "technologies": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-    "image": "/images/projects/congero-overview.jpg",
+    "image": "/images/projects/congero-hero-capture.jpg",
     "liveUrl": "https://congerotechnology.com/",
     "translations": {
       "es": {
@@ -201,9 +201,14 @@
         "outcome": "Una plataforma corporativa que une mejora visual, implementación web y continuidad técnica.",
         "gallery": [
           {
-            "src": "/images/projects/congero-overview.jpg",
-            "alt": "Página de Congero Technology Group con servicios de transformación digital.",
+            "src": "/images/projects/congero-hero-capture.jpg",
+            "alt": "Página de inicio de Congero Technology Group con servicios de transformación digital.",
             "caption": "Implementación WordPress y soporte de producción para una empresa de tecnología global."
+          },
+          {
+            "src": "/images/projects/congero-full-page-capture.jpg",
+            "alt": "Captura completa del sitio de Congero Technology Group.",
+            "caption": "Vista extendida de la experiencia, con capacidades, casos de éxito y contenido corporativo."
           }
         ]
       },
@@ -223,9 +228,14 @@
         "outcome": "A corporate platform combining visual refinement, web implementation, and technical continuity.",
         "gallery": [
           {
-            "src": "/images/projects/congero-overview.jpg",
-            "alt": "Congero Technology Group page featuring digital transformation services.",
+            "src": "/images/projects/congero-hero-capture.jpg",
+            "alt": "Congero Technology Group homepage featuring digital transformation services.",
             "caption": "WordPress implementation and production support for a global technology company."
+          },
+          {
+            "src": "/images/projects/congero-full-page-capture.jpg",
+            "alt": "Full-page capture of the Congero Technology Group website.",
+            "caption": "Extended view of the experience, including capabilities, success stories, and corporate content."
           }
         ]
       }
@@ -240,7 +250,7 @@
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
     "technologies": ["WordPress", "Elementor"],
-    "image": "/images/projects/biophilia-cover.svg",
+    "image": "/images/projects/biophilia-park-capture.jpg",
     "liveUrl": "https://biophiliapark.com/",
     "translations": {
       "es": {
@@ -249,7 +259,7 @@
         "challenge": "Presentar una propuesta de parque y hospedaje de forma clara y atractiva en distintos dispositivos.",
         "role": "Diseño web e implementación con WordPress y Elementor.",
         "solution": "Una presencia responsiva que organiza la información de la experiencia y facilita su exploración.",
-        "alt": "Cubierta tipográfica del portafolio para Biophilia Park.",
+        "alt": "Página de inicio de Biophilia Park con experiencias de naturaleza.",
         "unavailableLinkLabel": "Sitio en vivo no disponible"
       },
       "en": {
@@ -258,7 +268,7 @@
         "challenge": "Present a park and lodging proposition clearly and engagingly across devices.",
         "role": "Web design and implementation with WordPress and Elementor.",
         "solution": "A responsive presence that organizes the experience information and makes it easy to explore.",
-        "alt": "Portfolio typographic cover for Biophilia Park.",
+        "alt": "Biophilia Park homepage with nature experiences.",
         "unavailableLinkLabel": "Live site unavailable"
       }
     }
@@ -304,7 +314,7 @@
     "year": "2025",
     "disciplines": ["Front-end development", "Responsive interface"],
     "technologies": ["React", "TypeScript", "Vite"],
-    "image": "/images/projects/francisco-saco-cover.svg",
+    "image": "/images/projects/francisco-saco-capture.jpg",
     "liveUrl": "https://franciscosaco.com/",
     "translations": {
       "es": {
@@ -313,7 +323,7 @@
         "challenge": "Crear una experiencia web moderna y responsiva para presentar el trabajo de Francisco Saco.",
         "role": "Desarrollo front-end con React, TypeScript y Vite.",
         "solution": "Una implementación ligera y adaptable centrada en la presentación del contenido y la experiencia de navegación.",
-        "alt": "Cubierta tipográfica del portafolio para Francisco Saco.",
+        "alt": "Página de Francisco Saco con una interfaz de estética editorial.",
         "unavailableLinkLabel": "Sitio en vivo no disponible"
       },
       "en": {
@@ -322,7 +332,7 @@
         "challenge": "Create a modern, responsive web experience to present Francisco Saco's work.",
         "role": "Front-end development with React, TypeScript, and Vite.",
         "solution": "A lightweight, adaptable implementation focused on content presentation and navigation experience.",
-        "alt": "Portfolio typographic cover for Francisco Saco.",
+        "alt": "Francisco Saco website with an editorial-style interface.",
         "unavailableLinkLabel": "Live site unavailable"
       }
     }
