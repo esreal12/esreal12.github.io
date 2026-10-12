@@ -25,6 +25,27 @@ test('technical visitors can find a professional signature', async ({ page }) =>
   expect(signature).toContain('Eligible to work in Colombia and Costa Rica; available remotely.');
 });
 
+test('sitemap enumerates both localized versions of each project', async ({ page }) => {
+  const indexResponse = await page.request.get('/sitemap-index.xml');
+  const index = await indexResponse.text();
+  const sitemapResponse = await page.request.get('/sitemap-0.xml');
+  const sitemap = await sitemapResponse.text();
+
+  expect(indexResponse.status()).toBe(200);
+  expect(index).toContain('/sitemap-0.xml');
+  expect(sitemapResponse.status()).toBe(200);
+  expect(sitemap).toContain('/en/work/biophilia-park/');
+  expect(sitemap).toContain('/es/work/biophilia-park/');
+});
+
+test('robots advertises the sitemap for crawlers', async ({ page }) => {
+  const response = await page.request.get('/robots.txt');
+  const robots = await response.text();
+
+  expect(response.status()).toBe(200);
+  expect(robots).toContain('Sitemap: https://esreal12.github.io/sitemap-index.xml');
+});
+
 test('portfolio pages identify their author in metadata', async ({ page }) => {
   await page.goto('/en/');
 
@@ -79,11 +100,20 @@ test('work collection renders all eight records in English', async ({ page }) =>
 test('project cards use the approved project captures', async ({ page }) => {
   await page.goto('/en/work/');
 
-  await expect(page.locator('[data-project-card="kajual-gastronomia"] img')).toHaveAttribute('src', /kajual-capture\.png$/);
-  await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-capture\.png$/);
-  await expect(page.locator('[data-project-card="francisco-saco"] img')).toHaveAttribute('src', /francisco-saco-capture\.jpg$/);
-  await expect(page.locator('[data-project-card="brojanowskis-digital-store"] img')).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
-  await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+  await expect(page.locator('[data-project-card="asociacion-bancaria-costarricense"] img')).toHaveAttribute('src', /asociacion-bancaria-costarricense-homepage\.jpg$/);
+  await expect(page.locator('[data-project-card="kajual-gastronomia"] img')).toHaveAttribute('src', /kajual-gastronomia-homepage\.png$/);
+  await expect(page.locator('[data-project-card="estructuras-sa"] img')).toHaveAttribute('src', /estructuras-sa-homepage\.jpg$/);
+  await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-technology-group-homepage\.jpg$/);
+  await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-homepage\.png$/);
+  await expect(page.locator('[data-project-card="raindrop-spa"] img')).toHaveAttribute('src', /raindrop-spa-homepage\.jpg$/);
+  await expect(page.locator('[data-project-card="francisco-saco"] img')).toHaveAttribute('src', /francisco-saco-homepage\.jpg$/);
+  await expect(page.locator('[data-project-card="brojanowskis-digital-store"] img')).toHaveAttribute('src', /brojanowskis-digital-store-homepage\.png$/);
+});
+
+test('Brojanowski work card keeps the brand mark in frame', async ({ page }) => {
+  await page.goto('/en/work/');
+
+  await expect(page.locator('[data-project-card="brojanowskis-digital-store"] img')).toHaveCSS('object-position', '0% 50%');
 });
 
 test('Brojanowski case study uses its hero without a redundant gallery', async ({ page }) => {
@@ -95,21 +125,21 @@ test('Brojanowski case study uses its hero without a redundant gallery', async (
   await expect(technologies).toContainText('MemberPress');
   await expect(page.getByTestId('case-decisions')).toBeVisible();
   await expect(page.getByTestId('case-outcome')).toBeVisible();
-  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
+  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /brojanowskis-digital-store-homepage\.png$/);
   await expect(page.locator('.project-gallery')).toHaveCount(0);
 });
 
 test('Congero case study uses its hero without a redundant gallery', async ({ page }) => {
   await page.goto('/en/work/congero-technology-group/');
 
-  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /congero-technology-group-homepage\.jpg$/);
   await expect(page.locator('.project-gallery')).toHaveCount(0);
 });
 
 test('case studies omit an image gallery when there is no visual beyond the hero', async ({ page }) => {
   await page.goto('/en/work/asociacion-bancaria-costarricense/');
 
-  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /abc-overview\.jpg$/);
+  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /asociacion-bancaria-costarricense-homepage\.jpg$/);
   await expect(page.locator('.project-gallery')).toHaveCount(0);
 });
 
@@ -176,5 +206,13 @@ test('a Spanish case emits localized SEO and complete image alternatives', async
   await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
   await expect(page.locator('meta[property="og:description"]')).toHaveCount(1);
   await expect(page.locator('meta[property="og:image"]')).toHaveCount(1);
+  await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+    'content',
+    'Sitio de Kajual Gastronomía mostrando su propuesta culinaria.',
+  );
+  await expect(page.locator('meta[name="twitter:image:alt"]')).toHaveAttribute(
+    'content',
+    'Sitio de Kajual Gastronomía mostrando su propuesta culinaria.',
+  );
   await expect(page.locator('img[alt=""]')).toHaveCount(0);
 });

@@ -36,7 +36,7 @@ const navigationCopy = locale === 'es' ? { previous: 'Proyecto anterior', next: 
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout locale={locale} title={`${copy.title} — Andrés Israel Umaña Sedó`} description={copy.summary} canonicalPath={`/${locale}/work/${project.slug}/`} imagePath={project.image}>
+<BaseLayout locale={locale} title={`${copy.title} — Andrés Israel Umaña Sedó`} description={copy.summary} canonicalPath={`/${locale}/work/${project.slug}/`} imagePath={project.image} imageAlt={copy.alt}>
   <CaseStudy locale={locale} project={project as ProjectRecord} />
   <nav class="case-pagination container" aria-label="Project navigation">
     {previousProject && <a href={sitePath(`/${locale}/work/${previousProject.slug}/`, base)}>← {navigationCopy.previous}</a>}

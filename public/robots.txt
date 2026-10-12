@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://esreal12.github.io/sitemap-index.xml

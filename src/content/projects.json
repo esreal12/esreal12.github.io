@@ -8,7 +8,7 @@
     "year": "2018–2026",
     "disciplines": ["Platform development", "Content architecture", "Technical support"],
     "technologies": ["WordPress", "PHP", "HTML", "CSS/SCSS", "JavaScript", "Git"],
-    "image": "/images/projects/abc-overview.jpg",
+    "image": "/images/projects/asociacion-bancaria-costarricense-homepage.jpg",
     "liveUrl": "https://www.abc.fi.cr/",
     "translations": {
       "es": {
@@ -27,7 +27,7 @@
         "outcome": "Una colaboración de largo plazo que ha acompañado la evolución, operación y confiabilidad de la presencia digital institucional.",
         "gallery": [
           {
-            "src": "/images/projects/abc-overview.jpg",
+            "src": "/images/projects/asociacion-bancaria-costarricense-homepage.jpg",
             "alt": "Página de inicio institucional de la Asociación Bancaria Costarricense.",
             "caption": "Plataforma institucional para información, recursos y comunicación sectorial."
           }
@@ -49,7 +49,7 @@
         "outcome": "A long-term collaboration supporting the evolution, operation, and reliability of an institutional digital presence.",
         "gallery": [
           {
-            "src": "/images/projects/abc-overview.jpg",
+            "src": "/images/projects/asociacion-bancaria-costarricense-homepage.jpg",
             "alt": "Institutional homepage for the Costa Rican Banking Association.",
             "caption": "Institutional platform for information, resources, and sector communication."
           }
@@ -66,7 +66,7 @@
     "year": "2025",
     "disciplines": ["E-commerce", "Custom storefront development", "Reservations"],
     "technologies": ["Shopify", "Liquid", "HTML", "CSS", "JavaScript"],
-    "image": "/images/projects/kajual-capture.png",
+    "image": "/images/projects/kajual-gastronomia-homepage.png",
     "liveUrl": "https://www.kajualgastronomia.com/",
     "translations": {
       "es": {
@@ -85,7 +85,7 @@
         "outcome": "Una plataforma comercial que reúne experiencias, servicios y productos en un solo recorrido de marca.",
         "gallery": [
           {
-            "src": "/images/projects/kajual-capture.png",
+            "src": "/images/projects/kajual-gastronomia-homepage.png",
             "alt": "Página de Kajual Gastronomía con experiencias culinarias.",
             "caption": "Comercio y experiencias gastronómicas presentados en una misma plataforma."
           }
@@ -107,7 +107,7 @@
         "outcome": "A commerce platform bringing experiences, services, and products into one brand journey.",
         "gallery": [
           {
-            "src": "/images/projects/kajual-capture.png",
+            "src": "/images/projects/kajual-gastronomia-homepage.png",
             "alt": "Kajual Gastronomía page featuring culinary experiences.",
             "caption": "Commerce and culinary experiences in one platform."
           }
@@ -124,7 +124,7 @@
     "year": "2025",
     "disciplines": ["WordPress development", "Figma implementation", "Responsive front end"],
     "technologies": ["WordPress", "Figma", "PHP", "HTML", "CSS/SCSS", "JavaScript"],
-    "image": "/images/projects/estructuras-overview.jpg",
+    "image": "/images/projects/estructuras-sa-homepage.jpg",
     "liveUrl": "https://estructurassa.com/",
     "translations": {
       "es": {
@@ -143,7 +143,7 @@
         "outcome": "Una presencia corporativa funcional que conecta especificaciones de diseño, estructura de contenido y necesidades operativas.",
         "gallery": [
           {
-            "src": "/images/projects/estructuras-overview.jpg",
+            "src": "/images/projects/estructuras-sa-homepage.jpg",
             "alt": "Página corporativa de Estructuras S.A. implementada en WordPress.",
             "caption": "Implementación WordPress a partir del diseño proporcionado por Elástica."
           }
@@ -165,7 +165,7 @@
         "outcome": "A functional corporate presence connecting design specifications, content structure, and operational needs.",
         "gallery": [
           {
-            "src": "/images/projects/estructuras-overview.jpg",
+            "src": "/images/projects/estructuras-sa-homepage.jpg",
             "alt": "Estructuras S.A. corporate site implemented in WordPress.",
             "caption": "WordPress implementation from a design supplied by Elástica."
           }
@@ -182,7 +182,7 @@
     "year": "2026",
     "disciplines": ["WordPress development", "Design refinement", "Production support"],
     "technologies": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-    "image": "/images/projects/congero-hero-capture.jpg",
+    "image": "/images/projects/congero-technology-group-homepage.jpg",
     "liveUrl": "https://congerotechnology.com/",
     "translations": {
       "es": {
@@ -201,7 +201,7 @@
         "outcome": "Una plataforma corporativa que une mejora visual, implementación web y continuidad técnica.",
         "gallery": [
           {
-            "src": "/images/projects/congero-hero-capture.jpg",
+            "src": "/images/projects/congero-technology-group-homepage.jpg",
             "alt": "Página de inicio de Congero Technology Group con servicios de transformación digital.",
             "caption": "Implementación WordPress y soporte de producción para una empresa de tecnología global."
           }
@@ -223,7 +223,7 @@
         "outcome": "A corporate platform combining visual refinement, web implementation, and technical continuity.",
         "gallery": [
           {
-            "src": "/images/projects/congero-hero-capture.jpg",
+            "src": "/images/projects/congero-technology-group-homepage.jpg",
             "alt": "Congero Technology Group homepage featuring digital transformation services.",
             "caption": "WordPress implementation and production support for a global technology company."
           }
@@ -240,7 +240,7 @@
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
     "technologies": ["WordPress", "Elementor"],
-    "image": "/images/projects/biophilia-park-capture.png",
+    "image": "/images/projects/biophilia-park-homepage.png",
     "liveUrl": "https://biophiliapark.com/",
     "translations": {
       "es": {
@@ -272,7 +272,7 @@
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
     "technologies": ["WordPress", "Elementor"],
-    "image": "/images/projects/raindrop-overview.jpg",
+    "image": "/images/projects/raindrop-spa-homepage.jpg",
     "liveUrl": "https://raindropspa.com/",
     "translations": {
       "es": {
@@ -304,7 +304,7 @@
     "year": "2025",
     "disciplines": ["Front-end development", "Responsive interface"],
     "technologies": ["React", "TypeScript", "Vite"],
-    "image": "/images/projects/francisco-saco-capture.jpg",
+    "image": "/images/projects/francisco-saco-homepage.jpg",
     "liveUrl": "https://franciscosaco.com/",
     "translations": {
       "es": {
@@ -336,7 +336,7 @@
     "year": "2025–2026",
     "disciplines": ["E-commerce design", "Membership platform", "Motion adaptation"],
     "technologies": ["WordPress", "WooCommerce", "MemberPress", "Elementor", "PHP", "JavaScript", "Figma", "After Effects", "Illustrator", "Photoshop"],
-    "image": "/images/projects/brojanowski-hero-capture.png",
+    "image": "/images/projects/brojanowskis-digital-store-homepage.png",
     "liveUrl": "https://brojanowski.com/",
     "translations": {
       "es": {
@@ -355,7 +355,7 @@
         "outcome": "Una plataforma de marca donde la audiencia puede comprar productos digitales y cursos, acceder a contenido por membresía y recorrer la propuesta del artista en una sola experiencia.",
         "gallery": [
           {
-            "src": "/images/projects/brojanowski-hero-capture.png",
+            "src": "/images/projects/brojanowskis-digital-store-homepage.png",
             "alt": "Hero de Brojanowski's Digital Store promoviendo cursos y sesiones de música electrónica.",
             "caption": "Una propuesta visual y comercial que dirige a cursos, sesiones y productos digitales."
           }
@@ -377,7 +377,7 @@
         "outcome": "A branded platform where visitors can buy digital goods and courses, access membership content, and explore the artist's offering in one experience.",
         "gallery": [
           {
-            "src": "/images/projects/brojanowski-hero-capture.png",
+            "src": "/images/projects/brojanowskis-digital-store-homepage.png",
             "alt": "Brojanowski's Digital Store hero promoting electronic music courses and sessions.",
             "caption": "A visual and commercial proposition directing visitors to courses, sessions, and digital goods."
           }
