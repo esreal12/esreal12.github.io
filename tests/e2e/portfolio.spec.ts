@@ -20,6 +20,8 @@ test('technical visitors can find a professional signature', async ({ page }) =>
   expect(response.status()).toBe(200);
   expect(signature).toContain('Andrés Israel Umaña Sedó');
   expect(signature).toContain('Astro');
+  expect(signature).toContain('Zipaquirá, Cundinamarca');
+  expect(signature).not.toContain('Costa Rica');
 });
 
 test('portfolio pages identify their author in metadata', async ({ page }) => {

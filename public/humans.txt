@@ -1,7 +1,7 @@
 /* TEAM */
 Name: Andrés Israel Umaña Sedó
 Role: Digital designer and web developer
-Location: Costa Rica — available remotely
+Location: Zipaquirá, Cundinamarca, Colombia — available remotely
 
 /* THIS PORTFOLIO */
 Built with: Astro, TypeScript, semantic HTML, custom CSS, and GitHub Pages
