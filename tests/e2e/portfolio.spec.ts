@@ -23,6 +23,16 @@ test('motion enhancement respects reduced-motion preferences', async ({ page }) 
   await expect(page.locator('html')).not.toHaveClass(/motion-ready/);
 });
 
+test('motion uses smooth easing for reveals and pointer interactions', async ({ page }) => {
+  await page.goto('/en/');
+
+  const heroTiming = await page.locator('.shell-intro h1').evaluate((element) => getComputedStyle(element).transitionTimingFunction);
+  const cardTiming = await page.locator('[data-project-card]').first().evaluate((element) => getComputedStyle(element).transitionTimingFunction);
+
+  expect(heroTiming).toContain('cubic-bezier(0.16, 1, 0.3, 1)');
+  expect(cardTiming).toContain('cubic-bezier(0.65, 0, 0.35, 1)');
+});
+
 test('about introduces Andrés with a portrait and downloadable CV', async ({ page }) => {
   await page.goto('/en/about/');
 
