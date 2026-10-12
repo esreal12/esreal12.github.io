@@ -1,10 +1,42 @@
 import { expect, test } from '@playwright/test';
 
-test('the site root prioritizes English', async ({ page }) => {
+test('the site root silently prioritizes English', async ({ page }) => {
+  const response = await page.request.get('/');
+  const markup = await response.text();
+
+  expect(markup).not.toMatch(/Redirecting/i);
+  expect(markup).not.toMatch(/<a\b/i);
+
   await page.goto('/');
 
   await expect(page).toHaveURL(/\/en\/$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+});
+
+test('technical visitors can find a professional signature', async ({ page }) => {
+  const response = await page.request.get('/humans.txt');
+  const signature = await response.text();
+
+  expect(response.status()).toBe(200);
+  expect(signature).toContain('Andrés Israel Umaña Sedó');
+  expect(signature).toContain('Astro');
+});
+
+test('portfolio pages identify their author in metadata', async ({ page }) => {
+  await page.goto('/en/');
+
+  await expect(page.locator('meta[name="author"]')).toHaveAttribute('content', 'Andrés Israel Umaña Sedó');
+});
+
+test('technical visitors receive an implementation note in DevTools', async ({ page }) => {
+  const messages: string[] = [];
+  page.on('console', (message) => messages.push(message.text()));
+
+  await page.goto('/en/');
+
+  expect(messages).toContain(
+    'Digital Work — Built by Andrés Israel Umaña Sedó with Astro, TypeScript, semantic HTML, and custom CSS. Curious about the implementation? https://github.com/esreal12/esreal12.github.io',
+  );
 });
 
 test('about introduces Andrés with a portrait and downloadable CV', async ({ page }) => {

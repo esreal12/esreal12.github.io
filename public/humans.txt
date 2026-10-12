@@ -1,0 +1,16 @@
+/* TEAM */
+Name: Andrés Israel Umaña Sedó
+Role: Digital designer and web developer
+Location: Costa Rica — available remotely
+
+/* THIS PORTFOLIO */
+Built with: Astro, TypeScript, semantic HTML, custom CSS, and GitHub Pages
+Focus: Clear digital experiences that connect business goals with production-ready web implementation.
+
+/* CONTACT */
+Portfolio: https://esreal12.github.io/
+LinkedIn: https://www.linkedin.com/in/israel-umana-sedo/
+Source: https://github.com/esreal12/esreal12.github.io
+
+/* NOTE */
+If you are reviewing the implementation, thank you for looking closely.
