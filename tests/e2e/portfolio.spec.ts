@@ -99,12 +99,11 @@ test('Brojanowski case study documents ecommerce, memberships, and motion work',
   await expect(page.locator('.project-gallery img')).toHaveAttribute('src', /brojanowski-page-capture\.png$/);
 });
 
-test('Congero case study includes its hero and long-form captures', async ({ page }) => {
+test('Congero case study uses its hero without a redundant gallery', async ({ page }) => {
   await page.goto('/en/work/congero-technology-group/');
 
-  const gallery = page.locator('.project-gallery');
-  await expect(gallery.locator('figure')).toHaveCount(1);
-  await expect(gallery.locator('img')).toHaveAttribute('src', /congero-full-page-capture\.jpg$/);
+  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+  await expect(page.locator('.project-gallery')).toHaveCount(0);
 });
 
 test('case studies omit an image gallery when there is no visual beyond the hero', async ({ page }) => {
