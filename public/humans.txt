@@ -2,6 +2,7 @@
 Name: Andrés Israel Umaña Sedó
 Role: Digital designer and web developer
 Location: Zipaquirá, Cundinamarca, Colombia — available remotely
+Work eligibility: Eligible to work in Colombia and Costa Rica; available remotely.
 
 /* THIS PORTFOLIO */
 Built with: Astro, TypeScript, semantic HTML, custom CSS, and GitHub Pages

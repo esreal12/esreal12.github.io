@@ -21,7 +21,8 @@ test('technical visitors can find a professional signature', async ({ page }) =>
   expect(signature).toContain('Andrés Israel Umaña Sedó');
   expect(signature).toContain('Astro');
   expect(signature).toContain('Zipaquirá, Cundinamarca');
-  expect(signature).not.toContain('Costa Rica');
+  expect(signature).not.toContain('Location: Costa Rica');
+  expect(signature).toContain('Eligible to work in Colombia and Costa Rica; available remotely.');
 });
 
 test('portfolio pages identify their author in metadata', async ({ page }) => {
@@ -45,6 +46,7 @@ test('about introduces Andrés with a portrait and downloadable CV', async ({ pa
   await page.goto('/en/about/');
 
   await expect(page.getByRole('img', { name: /Andrés Israel Umaña Sedó/i })).toBeVisible();
+  await expect(page.getByText('Eligible to work in Colombia and Costa Rica; available remotely.')).toBeVisible();
   await expect(page.getByRole('link', { name: /download cv/i })).toHaveAttribute('href', /andres-israel-umana-sedo-cv\.pdf$/);
   await expect(page.getByRole('link', { name: /download cv/i })).toHaveAttribute('download', '');
 });
