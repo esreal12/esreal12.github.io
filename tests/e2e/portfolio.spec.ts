@@ -86,7 +86,7 @@ test('project cards use the approved project captures', async ({ page }) => {
   await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
 });
 
-test('Brojanowski case study documents ecommerce, memberships, and motion work', async ({ page }) => {
+test('Brojanowski case study uses its hero without a redundant gallery', async ({ page }) => {
   await page.goto('/en/work/brojanowskis-digital-store/');
 
   await expect(page.getByRole('heading', { name: /brojanowski/i })).toBeVisible();
@@ -95,8 +95,8 @@ test('Brojanowski case study documents ecommerce, memberships, and motion work',
   await expect(technologies).toContainText('MemberPress');
   await expect(page.getByTestId('case-decisions')).toBeVisible();
   await expect(page.getByTestId('case-outcome')).toBeVisible();
-  await expect(page.locator('.project-gallery figure')).toHaveCount(1);
-  await expect(page.locator('.project-gallery img')).toHaveAttribute('src', /brojanowski-page-capture\.png$/);
+  await expect(page.locator('.case-visual img')).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
+  await expect(page.locator('.project-gallery')).toHaveCount(0);
 });
 
 test('Congero case study uses its hero without a redundant gallery', async ({ page }) => {
