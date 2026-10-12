@@ -68,11 +68,12 @@ test('keyboard users can see a skip link', async ({ page }) => {
   await expect(page.getByRole('link', { name: /saltar al contenido/i })).toBeVisible();
 });
 
-test('work collection renders all seven records in English', async ({ page }) => {
+test('work collection renders all eight records in English', async ({ page }) => {
   await page.goto('/en/work/');
 
-  await expect(page.locator('[data-project-card]')).toHaveCount(7);
+  await expect(page.locator('[data-project-card]')).toHaveCount(8);
   await expect(page.getByRole('heading', { name: /congero technology group/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /brojanowski/i })).toBeVisible();
 });
 
 test('project cards use the approved project captures', async ({ page }) => {
@@ -81,7 +82,22 @@ test('project cards use the approved project captures', async ({ page }) => {
   await expect(page.locator('[data-project-card="kajual-gastronomia"] img')).toHaveAttribute('src', /kajual-capture\.png$/);
   await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-capture\.jpg$/);
   await expect(page.locator('[data-project-card="francisco-saco"] img')).toHaveAttribute('src', /francisco-saco-capture\.jpg$/);
+  await expect(page.locator('[data-project-card="brojanowskis-digital-store"] img')).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
   await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
+});
+
+test('Brojanowski case study documents ecommerce, memberships, and motion work', async ({ page }) => {
+  await page.goto('/en/work/brojanowskis-digital-store/');
+
+  await expect(page.getByRole('heading', { name: /brojanowski/i })).toBeVisible();
+  const technologies = page.locator('.case-facts dd').nth(1);
+  await expect(technologies).toContainText('WooCommerce');
+  await expect(technologies).toContainText('MemberPress');
+  await expect(page.getByTestId('case-decisions')).toBeVisible();
+  await expect(page.getByTestId('case-outcome')).toBeVisible();
+  await expect(page.locator('.project-gallery figure')).toHaveCount(2);
+  await expect(page.locator('.project-gallery img').nth(0)).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
+  await expect(page.locator('.project-gallery img').nth(1)).toHaveAttribute('src', /brojanowski-page-capture\.png$/);
 });
 
 test('Congero case study includes its hero and long-form captures', async ({ page }) => {
@@ -93,10 +109,10 @@ test('Congero case study includes its hero and long-form captures', async ({ pag
   await expect(gallery.locator('img').nth(1)).toHaveAttribute('src', /congero-full-page-capture\.jpg$/);
 });
 
-test('work collection renders all seven records in Spanish', async ({ page }) => {
+test('work collection renders all eight records in Spanish', async ({ page }) => {
   await page.goto('/es/work/');
 
-  await expect(page.locator('[data-project-card]')).toHaveCount(7);
+  await expect(page.locator('[data-project-card]')).toHaveCount(8);
 });
 
 test('featured case study renders role, decisions, outcome, and gallery', async ({ page }) => {

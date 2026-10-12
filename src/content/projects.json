@@ -336,5 +336,73 @@
         "unavailableLinkLabel": "Live site unavailable"
       }
     }
+  },
+  {
+    "id": "brojanowskis-digital-store",
+    "slug": "brojanowskis-digital-store",
+    "order": 8,
+    "featured": false,
+    "caseStudy": true,
+    "year": "2025–2026",
+    "disciplines": ["E-commerce design", "Membership platform", "Motion adaptation"],
+    "technologies": ["WordPress", "WooCommerce", "MemberPress", "Elementor", "PHP", "JavaScript", "Figma", "After Effects", "Illustrator", "Photoshop"],
+    "image": "/images/projects/brojanowski-hero-capture.png",
+    "liveUrl": "https://brojanowski.com/",
+    "translations": {
+      "es": {
+        "title": "Brojanowski's Digital Store",
+        "summary": "Una plataforma de comercio y membresías para un artista internacional de música electrónica, con productos digitales, cursos online y acceso de pago.",
+        "challenge": "Convertir la propuesta artística y educativa en una experiencia comercial unificada, capaz de vender productos digitales, cursos y contenido de membresía desde el mismo sitio.",
+        "role": "Diseño web, integración de e-commerce y membresías, desarrollo WordPress personalizado, adaptación de animaciones y sesiones de orientación del proyecto junto al artista.",
+        "solution": "Implementación en WordPress con WooCommerce, MemberPress y Elementor, complementada con código personalizado para mostrar productos en áreas específicas y conectar comercio, aprendizaje y membresía.",
+        "alt": "Página de inicio de Brojanowski's Digital Store para productos y cursos de música electrónica.",
+        "unavailableLinkLabel": "Sitio en vivo no disponible",
+        "decisions": [
+          "Estructurar productos digitales, cursos y contenido exclusivo alrededor de WooCommerce y MemberPress.",
+          "Extender Elementor con código personalizado para mostrar productos y llamados a la acción en áreas estratégicas de la página.",
+          "Adaptar animaciones y la dirección visual mediante Figma, After Effects, Illustrator y Photoshop."
+        ],
+        "outcome": "Una plataforma de marca donde la audiencia puede comprar productos digitales y cursos, acceder a contenido por membresía y recorrer la propuesta del artista en una sola experiencia.",
+        "gallery": [
+          {
+            "src": "/images/projects/brojanowski-hero-capture.png",
+            "alt": "Hero de Brojanowski's Digital Store promoviendo cursos y sesiones de música electrónica.",
+            "caption": "Una propuesta visual y comercial que dirige a cursos, sesiones y productos digitales."
+          },
+          {
+            "src": "/images/projects/brojanowski-page-capture.png",
+            "alt": "Vista extendida de Brojanowski's Digital Store con producto musical y navegación.",
+            "caption": "La plataforma integra música, aprendizaje, comercio y contenido de membresía."
+          }
+        ]
+      },
+      "en": {
+        "title": "Brojanowski's Digital Store",
+        "summary": "An e-commerce and membership platform for an international electronic music artist, bringing together digital goods, online courses, and paid access.",
+        "challenge": "Turn the artist's creative and educational offering into one commerce experience that can sell digital goods, courses, and membership content from the same site.",
+        "role": "Web design, e-commerce and membership integration, custom WordPress development, motion adaptation, and project-direction sessions with the artist.",
+        "solution": "Built with WordPress, WooCommerce, MemberPress, and Elementor, complemented by custom code that surfaces products in specific areas and connects commerce, learning, and membership.",
+        "alt": "Brojanowski's Digital Store homepage for electronic music products and courses.",
+        "unavailableLinkLabel": "Live site unavailable",
+        "decisions": [
+          "Structured digital goods, courses, and member-only content around WooCommerce and MemberPress.",
+          "Extended Elementor with custom code to surface products and calls to action in strategic areas of the page.",
+          "Adapted motion and visual direction using Figma, After Effects, Illustrator, and Photoshop."
+        ],
+        "outcome": "A branded platform where visitors can buy digital goods and courses, access membership content, and explore the artist's offering in one experience.",
+        "gallery": [
+          {
+            "src": "/images/projects/brojanowski-hero-capture.png",
+            "alt": "Brojanowski's Digital Store hero promoting electronic music courses and sessions.",
+            "caption": "A visual and commercial proposition directing visitors to courses, sessions, and digital goods."
+          },
+          {
+            "src": "/images/projects/brojanowski-page-capture.png",
+            "alt": "Extended view of Brojanowski's Digital Store with a music product and navigation.",
+            "caption": "The platform brings music, learning, commerce, and membership content together."
+          }
+        ]
+      }
+    }
   }
 ]
