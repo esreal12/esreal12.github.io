@@ -52,6 +52,19 @@ test('portfolio pages identify their author in metadata', async ({ page }) => {
   await expect(page.locator('meta[name="author"]')).toHaveAttribute('content', 'Andrés Israel Umaña Sedó');
 });
 
+test('homepage social cards use the portfolio thumbnail', async ({ page }) => {
+  await page.goto('/en/');
+
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    'content',
+    /\/social\/andres-israel-umana-digital-work-thumbnail\.png$/,
+  );
+  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute(
+    'content',
+    /\/social\/andres-israel-umana-digital-work-thumbnail\.png$/,
+  );
+});
+
 test('technical visitors receive an implementation note in DevTools', async ({ page }) => {
   const messages: string[] = [];
   page.on('console', (message) => messages.push(message.text()));
