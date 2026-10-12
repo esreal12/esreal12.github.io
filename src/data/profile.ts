@@ -8,7 +8,7 @@ type ProfileCopy = {
   capabilities: { title: string; description: string }[];
   experience: { title: string; body: string };
   about: { title: string; description: string; body: string; availability: string; imageAlt: string; downloadCv: string };
-  contact: { title: string; description: string; schedule: string; email: string; linkedIn: string };
+  contact: { title: string; description: string; email: string; linkedIn: string };
 };
 
 export const profile = {
@@ -16,7 +16,6 @@ export const profile = {
   mark: 'Digital Work',
   email: 'andresisraelumanasedo@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/israel-umana-sedo/',
-  schedulingUrl: 'https://calendly.com/agenda-soluciondigital/consulta-inicial-solucion-digital',
   locales: {
     es: {
       navigation: { work: 'Proyectos', about: 'Sobre mí', contact: 'Contacto' },
@@ -35,7 +34,7 @@ export const profile = {
       ],
       experience: { title: 'Más de diez años conectando diseño, desarrollo y continuidad técnica.', body: 'Formado en Diseño Publicitario, trabajo desde la estrategia y la interfaz hasta la implementación, publicación y mantenimiento de plataformas web.' },
       about: { title: 'Diseño con criterio. Desarrollo con responsabilidad.', description: 'Andrés Israel Umaña Sedó — Digital Work', body: 'Soy diseñador y desarrollador web con experiencia en plataformas institucionales, comercio electrónico, WordPress, front-end moderno e integraciones. Mi trabajo conecta la intención de negocio con una experiencia clara y una implementación que puede sostenerse en producción.', availability: 'Resido en Zipaquirá, Cundinamarca, Colombia. Cuento con elegibilidad para trabajar en Colombia y Costa Rica, y estoy disponible para colaboraciones remotas.', imageAlt: 'Retrato de Andrés Israel Umaña Sedó', downloadCv: 'Descargar CV' },
-      contact: { title: 'Conversemos', description: 'Para una colaboración, oportunidad de equipo o nuevo proyecto, elige la forma que prefieras.', schedule: 'Agendar conversación', email: 'Email directo', linkedIn: 'LinkedIn' },
+      contact: { title: 'Conversemos', description: 'Para una colaboración, oportunidad de equipo o nuevo proyecto, elige la forma que prefieras.', email: 'Email directo', linkedIn: 'LinkedIn' },
     },
     en: {
       navigation: { work: 'Work', about: 'About', contact: 'Contact' },
@@ -54,7 +53,7 @@ export const profile = {
       ],
       experience: { title: 'More than ten years connecting design, development, and technical continuity.', body: 'With an Advertising Design background, I work from strategy and interface through implementation, release, and the ongoing care of web platforms.' },
       about: { title: 'Design with judgment. Development with responsibility.', description: 'Andrés Israel Umaña Sedó — Digital Work', body: 'I am a web designer and developer experienced in institutional platforms, e-commerce, WordPress, modern front ends, and integrations. My work connects business intent with a clear experience and an implementation that can be sustained in production.', availability: 'Based in Zipaquirá, Colombia. Eligible to work in Colombia and Costa Rica; available remotely.', imageAlt: 'Portrait of Andrés Israel Umaña Sedó', downloadCv: 'Download CV' },
-      contact: { title: 'Let’s talk', description: 'For a collaboration, team opportunity, or a new project, choose the channel that works best for you.', schedule: 'Schedule a conversation', email: 'Email directly', linkedIn: 'LinkedIn' },
+      contact: { title: 'Let’s talk', description: 'For a collaboration, team opportunity, or a new project, choose the channel that works best for you.', email: 'Email directly', linkedIn: 'LinkedIn' },
     },
   } satisfies Record<Locale, ProfileCopy>,
 } as const;

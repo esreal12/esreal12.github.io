@@ -141,11 +141,11 @@ test('homepage uses one primary project action and never asks visitors to self-s
   await expect(page.getByText(/for clients/i)).toHaveCount(0);
 });
 
-test('contact page exposes scheduling, email, and LinkedIn', async ({ page }) => {
+test('contact page exposes personal email and LinkedIn without Solución Digital scheduling', async ({ page }) => {
   await page.goto('/es/contact/');
   const main = page.locator('main');
 
-  await expect(main.getByRole('link', { name: /agendar/i })).toHaveCount(1);
+  await expect(main.locator('a[href*="calendly.com"]')).toHaveCount(0);
   await expect(main.getByRole('link', { name: /email/i })).toHaveAttribute('href', /mailto:/);
   await expect(main.getByRole('link', { name: /linkedin/i })).toHaveAttribute('href', /linkedin\.com/);
 });
