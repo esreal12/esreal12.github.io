@@ -52,6 +52,19 @@ test('portfolio pages identify their author in metadata', async ({ page }) => {
   await expect(page.locator('meta[name="author"]')).toHaveAttribute('content', 'Andrés Israel Umaña Sedó');
 });
 
+test('site identifies itself with Andrés’s portrait favicon', async ({ page }) => {
+  await page.goto('/en/');
+
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
+    'href',
+    '/images/profile/andres-israel-umana-sedo-favicon.png',
+  );
+  await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+    'href',
+    '/images/profile/andres-israel-umana-sedo-favicon.png',
+  );
+});
+
 test('homepage social cards use the portfolio thumbnail', async ({ page }) => {
   await page.goto('/en/');
 
