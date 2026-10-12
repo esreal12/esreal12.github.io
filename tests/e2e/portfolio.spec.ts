@@ -7,6 +7,22 @@ test('the site root prioritizes English', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
+test('motion enhancement reveals homepage content without changing its links', async ({ page }) => {
+  await page.goto('/en/');
+
+  await expect(page.locator('html')).toHaveClass(/motion-ready/);
+  await expect(page.locator('.shell-intro h1')).toHaveAttribute('data-reveal', 'hero');
+  await expect(page.locator('[data-project-card]').first()).toHaveAttribute('data-reveal', 'card');
+  await expect(page.getByRole('link', { name: /explore selected work/i })).toHaveAttribute('href', '/en/work/');
+});
+
+test('motion enhancement respects reduced-motion preferences', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/en/');
+
+  await expect(page.locator('html')).not.toHaveClass(/motion-ready/);
+});
+
 test('about introduces Andrés with a portrait and downloadable CV', async ({ page }) => {
   await page.goto('/en/about/');
 
