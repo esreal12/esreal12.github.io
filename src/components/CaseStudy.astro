@@ -13,6 +13,7 @@ const { locale, project } = Astro.props;
 const copy = project.translations[locale];
 const liveUrl = getLiveLink(project);
 const base = import.meta.env.BASE_URL;
+const galleryItems = copy.gallery?.filter((item) => item.src !== project.image);
 const labels = locale === 'es'
   ? { role: 'Rol y alcance', challenge: 'El reto', solution: 'La solución', decisions: 'Decisiones clave', outcome: 'Resultado', technologies: 'Tecnologías', live: 'Visitar sitio' }
   : { role: 'Role and scope', challenge: 'The challenge', solution: 'The solution', decisions: 'Key decisions', outcome: 'Outcome', technologies: 'Technologies', live: 'Visit site' };
@@ -49,7 +50,7 @@ const labels = locale === 'es'
     )}
   </div>
 
-  {project.caseStudy && copy.gallery && <ProjectGallery items={copy.gallery} />}
+  {project.caseStudy && galleryItems?.length ? <ProjectGallery items={galleryItems} /> : null}
 
   <div class="case-live-link">
     {liveUrl ? <a href={liveUrl} rel="noreferrer" target="_blank">{labels.live}</a> : <span>{copy.unavailableLinkLabel}</span>}
