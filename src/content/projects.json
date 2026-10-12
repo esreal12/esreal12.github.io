@@ -240,7 +240,7 @@
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
     "technologies": ["WordPress", "Elementor"],
-    "image": "/images/projects/biophilia-park-capture.jpg",
+    "image": "/images/projects/biophilia-park-capture.png",
     "liveUrl": "https://biophiliapark.com/",
     "translations": {
       "es": {

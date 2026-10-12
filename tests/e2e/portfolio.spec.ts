@@ -80,7 +80,7 @@ test('project cards use the approved project captures', async ({ page }) => {
   await page.goto('/en/work/');
 
   await expect(page.locator('[data-project-card="kajual-gastronomia"] img')).toHaveAttribute('src', /kajual-capture\.png$/);
-  await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-capture\.jpg$/);
+  await expect(page.locator('[data-project-card="biophilia-park"] img')).toHaveAttribute('src', /biophilia-park-capture\.png$/);
   await expect(page.locator('[data-project-card="francisco-saco"] img')).toHaveAttribute('src', /francisco-saco-capture\.jpg$/);
   await expect(page.locator('[data-project-card="brojanowskis-digital-store"] img')).toHaveAttribute('src', /brojanowski-hero-capture\.png$/);
   await expect(page.locator('[data-project-card="congero-technology-group"] img')).toHaveAttribute('src', /congero-hero-capture\.jpg$/);
