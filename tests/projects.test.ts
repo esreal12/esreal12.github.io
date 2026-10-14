@@ -31,6 +31,7 @@ test('lists the implementation technologies used by the selected WordPress proje
   const technologiesFor = (slug: string) =>
     portfolioProjects.find((project) => project.slug === slug)?.technologies;
 
+  expect(technologiesFor('kajual-gastronomia')).toContain('Figma');
   expect(technologiesFor('asociacion-bancaria-costarricense')).toContain('Elementor');
   expect(technologiesFor('estructuras-sa')).toContain('Elementor');
   expect(technologiesFor('congero-technology-group')).toEqual(

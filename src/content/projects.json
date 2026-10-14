@@ -65,7 +65,7 @@
     "caseStudy": true,
     "year": "2025",
     "disciplines": ["E-commerce", "Custom storefront development", "Reservations"],
-    "technologies": ["Shopify", "Liquid", "HTML", "CSS", "JavaScript"],
+    "technologies": ["Shopify", "Liquid", "Figma", "HTML", "CSS", "JavaScript"],
     "image": "/images/projects/kajual-gastronomia-homepage.png",
     "liveUrl": "https://www.kajualgastronomia.com/",
     "translations": {
