@@ -7,7 +7,7 @@
     "caseStudy": true,
     "year": "2018–2026",
     "disciplines": ["Platform development", "Content architecture", "Technical support"],
-    "technologies": ["WordPress", "PHP", "HTML", "CSS/SCSS", "JavaScript", "Git"],
+    "technologies": ["WordPress", "Elementor", "PHP", "HTML", "CSS/SCSS", "JavaScript", "Git"],
     "image": "/images/projects/asociacion-bancaria-costarricense-homepage.jpg",
     "liveUrl": "https://www.abc.fi.cr/",
     "translations": {
@@ -123,7 +123,7 @@
     "caseStudy": true,
     "year": "2025",
     "disciplines": ["WordPress development", "Figma implementation", "Responsive front end"],
-    "technologies": ["WordPress", "Figma", "PHP", "HTML", "CSS/SCSS", "JavaScript"],
+    "technologies": ["WordPress", "Elementor", "Figma", "PHP", "HTML", "CSS/SCSS", "JavaScript"],
     "image": "/images/projects/estructuras-sa-homepage.jpg",
     "liveUrl": "https://estructurassa.com/",
     "translations": {
@@ -181,7 +181,7 @@
     "caseStudy": true,
     "year": "2026",
     "disciplines": ["WordPress development", "Design refinement", "Production support"],
-    "technologies": ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    "technologies": ["WordPress", "Elementor", "PHP", "HTML", "CSS", "JavaScript", "Photoshop"],
     "image": "/images/projects/congero-technology-group-homepage.jpg",
     "liveUrl": "https://congerotechnology.com/",
     "translations": {
@@ -239,7 +239,7 @@
     "caseStudy": false,
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
-    "technologies": ["WordPress", "Elementor"],
+    "technologies": ["WordPress", "Elementor", "PHP", "HTML", "CSS", "JavaScript", "Illustrator"],
     "image": "/images/projects/biophilia-park-homepage.png",
     "liveUrl": "https://biophiliapark.com/",
     "translations": {
@@ -271,7 +271,7 @@
     "caseStudy": false,
     "year": "2025",
     "disciplines": ["Web design", "Responsive implementation"],
-    "technologies": ["WordPress", "Elementor"],
+    "technologies": ["WordPress", "Elementor", "PHP", "HTML", "CSS", "JavaScript"],
     "image": "/images/projects/raindrop-spa-homepage.jpg",
     "liveUrl": "https://raindropspa.com/",
     "translations": {
